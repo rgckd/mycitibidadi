@@ -14,6 +14,21 @@ node_modules/
 # Email configuration (contains passwords)
 contact-phpmailer.php
 
+# OAuth and sensitive configuration files
+updates/phpmailerw/get_oauth_token.php
+updates/assets/phpmailer/mail.php
+
+# Any file ending with .secret or .private
+*.secret
+*.private
+*-secret.php
+*-private.php
+
+# Backup files that might contain credentials
+*.bak
+*.backup
+*~
+
 # OS files
 .DS_Store
 Thumbs.db

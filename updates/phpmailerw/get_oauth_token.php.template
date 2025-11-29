@@ -11,6 +11,11 @@
  * using link: https://accounts.google.com/b/0/IssuedAuthSubTokens and run the script again.
  * This script requires PHP 5.4 or later
  * PHP Version 5.4
+ * 
+ * INSTRUCTIONS:
+ * 1. Copy this file to get_oauth_token.php
+ * 2. Replace YOUR_CLIENT_ID_HERE and YOUR_CLIENT_SECRET_HERE with your actual credentials
+ * 3. The actual file is ignored by Git to keep your credentials safe
  */
 
 namespace League\OAuth2\Client\Provider;
@@ -29,8 +34,9 @@ $redirectUri = isset($_SERVER['HTTPS']) ? 'https://' : 'http://' . $_SERVER['HTT
 //$redirectUri = 'http://localhost/phpmailer/get_oauth_token.php';
 
 //These details obtained are by setting up app in Google developer console.
-$clientId = 'RANDOMCHARS-----duv1n2.apps.googleusercontent.com';
-$clientSecret = 'RANDOMCHARS-----lGyjPcRtvP';
+// REPLACE THESE WITH YOUR ACTUAL CREDENTIALS:
+$clientId = 'YOUR_CLIENT_ID_HERE.apps.googleusercontent.com';
+$clientSecret = 'YOUR_CLIENT_SECRET_HERE';
 
 class Google extends AbstractProvider
 {
@@ -50,12 +56,6 @@ class Google extends AbstractProvider
      */
     protected $hostedDomain;
 
-    /**
-     * @var string If set, this will be sent to google as the "scope" parameter.
-     * @link https://developers.google.com/gmail/api/auth/scopes
-     */
-    protected $scope;
-
     public function getBaseAuthorizationUrl()
     {
         return 'https://accounts.google.com/o/oauth2/auth';
@@ -68,27 +68,18 @@ class Google extends AbstractProvider
 
     public function getResourceOwnerDetailsUrl(AccessToken $token)
     {
-	return ' ';
+        return 'https://www.googleapis.com/plus/v1/people/me?prettyPrint=true';
     }
 
     protected function getAuthorizationParameters(array $options)
     {
-	if (is_array($this->scope)) {
-            $separator = $this->getScopeSeparator();
-            $this->scope = implode($separator, $this->scope);
+        if (is_array($this->accessType)) {
+            $options = array_merge($options, $this->accessType);
         }
-
-        $params = array_merge(
-            parent::getAuthorizationParameters($options),
-            array_filter([
-                'hd'          => $this->hostedDomain,
-                'access_type' => $this->accessType,
-		'scope'       => $this->scope,
-                // if the user is logged in with more than one account ask which one to use for the login!
-                'authuser'    => '-1'
-            ])
-        );
-        return $params;
+        if (is_array($this->hostedDomain)) {
+            $options = array_merge($options, $this->hostedDomain);
+        }
+        return parent::getAuthorizationParameters($options);
     }
 
     protected function getDefaultScopes()
@@ -97,6 +88,7 @@ class Google extends AbstractProvider
             'email',
             'openid',
             'profile',
+            'https://mail.google.com/'
         ];
     }
 
@@ -110,12 +102,10 @@ class Google extends AbstractProvider
         if (!empty($data['error'])) {
             $code  = 0;
             $error = $data['error'];
-
             if (is_array($error)) {
                 $code  = $error['code'];
                 $error = $error['message'];
             }
-
             throw new IdentityProviderException($error, $code, $data);
         }
     }
@@ -126,16 +116,13 @@ class Google extends AbstractProvider
     }
 }
 
-
-//Set Redirect URI in Developer Console as [https/http]://<yourdomain>/<folder>/get_oauth_token.php
 $provider = new Google(
-    array(
-        'clientId' => $clientId,
+    [
+        'clientId'     => $clientId,
         'clientSecret' => $clientSecret,
-        'redirectUri' => $redirectUri,
-        'scope' => array('https://mail.google.com/'),
-	'accessType' => 'offline'
-    )
+        'redirectUri'  => $redirectUri,
+        'accessType'   => 'offline'
+    ]
 );
 
 if (!isset($_GET['code'])) {
@@ -152,11 +139,10 @@ if (!isset($_GET['code'])) {
     // Try to get an access token (using the authorization code grant)
     $token = $provider->getAccessToken(
         'authorization_code',
-        array(
+        [
             'code' => $_GET['code']
-        )
+        ]
     );
-
-    // Use this to get a new access token if the old one expires
+    // Use this to interact with an API on the users behalf
     echo 'Refresh Token: ' . $token->getRefreshToken();
 }
