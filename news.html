@@ -55,11 +55,20 @@
 			overflow: hidden;
 			box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 			transition: transform 0.3s, box-shadow 0.3s;
+			display: flex;
+			flex-direction: column;
 		}
 		
 		.news-card:hover {
 			transform: translateY(-5px);
 			box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+		}
+		
+		.news-card-image {
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+			background: #f0f0f0;
 		}
 		
 		.news-card-header {
@@ -275,6 +284,7 @@
 			<div class="news-grid">
 				<!-- News Item 1 - AGM 2025 -->
 				<div class="news-card">
+					<img src="assets/img/myciti_core_commmittee_discussion.jpg" alt="AGM 2025" class="news-card-image">
 					<div class="news-card-header">
 						<div class="news-date">
 							<i class="fas fa-calendar-alt"></i>
@@ -290,6 +300,7 @@
 				
 				<!-- News Item 2 - Office Renovation -->
 				<div class="news-card">
+					<img src="assets/img/myciti_entrance_gate.jpg" alt="Office Renovation" class="news-card-image">
 					<div class="news-card-header">
 						<div class="news-date">
 							<i class="fas fa-calendar-alt"></i>
@@ -305,6 +316,7 @@
 				
 				<!-- News Item 3 - Updated Bylaws -->
 				<div class="news-card">
+					<img src="assets/img/notice.jpg" alt="Updated Bylaws" class="news-card-image">
 					<div class="news-card-header">
 						<div class="news-date">
 							<i class="fas fa-calendar-alt"></i>
@@ -320,6 +332,7 @@
 				
 				<!-- News Item 4 - Mobile Toilets -->
 				<div class="news-card">
+					<img src="assets/img/myciti_projects.jpeg" alt="Infrastructure" class="news-card-image">
 					<div class="news-card-header">
 						<div class="news-date">
 							<i class="fas fa-calendar-alt"></i>
@@ -335,6 +348,7 @@
 				
 				<!-- News Item 5 - AI City Bidadi -->
 				<div class="news-card">
+					<img src="assets/img/bidadi_it_city.png" alt="AI City Bidadi" class="news-card-image">
 					<div class="news-card-header">
 						<div class="news-date">
 							<i class="fas fa-calendar-alt"></i>
@@ -350,6 +364,7 @@
 				
 				<!-- News Item 6 - Metro Extension -->
 				<div class="news-card">
+					<img src="assets/img/bidadi_station.png" alt="Metro Extension" class="news-card-image">
 					<div class="news-card-header">
 						<div class="news-date">
 							<i class="fas fa-calendar-alt"></i>
@@ -365,6 +380,7 @@
 				
 				<!-- News Item 7 - IT Park -->
 				<div class="news-card">
+					<img src="assets/img/myciti_layout.jpeg" alt="IT Park" class="news-card-image">
 					<div class="news-card-header">
 						<div class="news-date">
 							<i class="fas fa-calendar-alt"></i>
@@ -380,6 +396,7 @@
 				
 				<!-- News Item 8 - Waste-to-Energy Plant -->
 				<div class="news-card">
+					<img src="assets/img/myciti_tree_plantation.png" alt="Environment" class="news-card-image">
 					<div class="news-card-header">
 						<div class="news-date">
 							<i class="fas fa-calendar-alt"></i>
