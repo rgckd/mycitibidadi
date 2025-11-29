@@ -615,7 +615,7 @@ https://x.com/myciti_bidadi" target="_blank"><i class="fab fa-twitter"></i></a>
 					</div>
 					<div class="col-lg-7">
 						<div class="it-up-form-wrap">
-							<form action="contact.php" method="POST">
+							<form action="contact.php" method="POST" id="contactForm">
 								<div class="it-up-form-input">
 									<div class="row">
 										<div class="col-md-6">
@@ -633,6 +633,28 @@ https://x.com/myciti_bidadi" target="_blank"><i class="fab fa-twitter"></i></a>
 										<div class="col-md-12">
 											<label>Phone Number*</label>
 											<input type="tel" name="phone" placeholder="+91 9900742192" required>
+										</div>
+									</div>
+								</div>
+								<div class="it-up-form-select position-relative">
+									<label>Are you a site owner at MyCiti Layout?*</label>
+									<select name="is_owner" id="isOwnerSelect" required onchange="toggleOwnerFields()">
+										<option value="">-- Please select --</option>
+										<option value="Yes">Yes</option>
+										<option value="No">No</option>
+									</select>
+								</div>
+								<div id="ownerFields" style="display: none;">
+									<div class="it-up-form-input">
+										<div class="row">
+											<div class="col-md-6">
+												<label>Plot Number(s)*</label>
+												<input type="text" name="plot_numbers" id="plotNumbers" placeholder="e.g., 123, 456">
+											</div>
+											<div class="col-md-6">
+												<label>Phase(s)*</label>
+												<input type="text" name="phases" id="phases" placeholder="e.g., Phase 1, Phase 2">
+											</div>
 										</div>
 									</div>
 								</div>
@@ -967,6 +989,26 @@ Bengaluru Rural District</a>
 				closeFormModal();
 			}
 		});
+		
+		// Toggle owner fields visibility
+		function toggleOwnerFields() {
+			const isOwner = document.getElementById('isOwnerSelect').value;
+			const ownerFields = document.getElementById('ownerFields');
+			const plotNumbers = document.getElementById('plotNumbers');
+			const phases = document.getElementById('phases');
+			
+			if (isOwner === 'Yes') {
+				ownerFields.style.display = 'block';
+				plotNumbers.required = true;
+				phases.required = true;
+			} else {
+				ownerFields.style.display = 'none';
+				plotNumbers.required = false;
+				phases.required = false;
+				plotNumbers.value = '';
+				phases.value = '';
+			}
+		}
 	</script>
 </body>
 </html>		
