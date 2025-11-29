@@ -2,7 +2,7 @@
 
 // Define some constants
 define( "RECIPIENT_NAME", "MyCiti Owners Association" );
-define( "RECIPIENT_EMAIL", "mycitiownersassociation@gmail.com" );
+define( "RECIPIENT_EMAIL", "rgchandar@gmail.com" );
 
 // Read the form values
 $userName = isset( $_POST['name'] ) ? preg_replace( "/[^\s\S\.\-\_\@a-zA-Z0-9]/", "", $_POST['name'] ) : "";
