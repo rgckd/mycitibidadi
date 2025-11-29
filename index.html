@@ -615,32 +615,41 @@ https://x.com/myciti_bidadi" target="_blank"><i class="fab fa-twitter"></i></a>
 					</div>
 					<div class="col-lg-7">
 						<div class="it-up-form-wrap">
-							<form action="contact.php">
+							<form action="contact-phpmailer.php" method="POST">
 								<div class="it-up-form-input">
 									<div class="row">
 										<div class="col-md-6">
 											<label>Full name*</label>
-											<input type="text" placeholder="John Doe">
+											<input type="text" name="name" placeholder="John Doe" required>
 										</div>
 										<div class="col-md-6">
 											<label>Mail address*</label>
-											<input type="text" placeholder="email@example.com">
+											<input type="email" name="email" placeholder="email@example.com" required>
+										</div>
+									</div>
+								</div>
+								<div class="it-up-form-input">
+									<div class="row">
+										<div class="col-md-12">
+											<label>Phone Number*</label>
+											<input type="tel" name="phone" placeholder="+91 9900742192" required>
 										</div>
 									</div>
 								</div>
 								<div class="it-up-form-select position-relative">
 									<label>Select Services*</label>
-									<select name="#" id="#">
-										<option value="#">Sell my site </option>
-										<option value="#">Purchase a site</option>
-										<option value="#">Member Registration </option>
-										<option value="#">eKhata </option>
-										<option value="#">Other </option>
+									<select name="subject" required>
+										<option value="">-- Select a service --</option>
+										<option value="Sell my site">Sell my site</option>
+										<option value="Purchase a site">Purchase a site</option>
+										<option value="Member Registration">Member Registration</option>
+										<option value="eKhata">eKhata</option>
+										<option value="Other">Other</option>
 									</select>
 								</div>
 								<div class="it-up-form-input">
 									<label>Type your message*</label>
-									<textarea placeholder="Message..."></textarea>
+									<textarea name="message" placeholder="Message..." required></textarea>
 								</div>
 								<button type="submit">Send your message <i class="fas fa-arrow-right"></i></button>
 							</form>

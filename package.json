@@ -1,0 +1,19 @@
+{
+  "name": "mycitibidadi-tests",
+  "version": "1.0.0",
+  "description": "Automated tests for MyCiti Layout Bidadi website",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:report": "playwright show-report",
+    "test:ui": "playwright test --ui",
+    "test:chrome": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:safari": "playwright test --project=webkit"
+  },
+  "keywords": ["testing", "playwright", "e2e"],
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  }
+}

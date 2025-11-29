@@ -1,0 +1,154 @@
+<?php
+/**
+ * Contact Form with PHPMailer - TEMPLATE FILE
+ * Copy this to contact-phpmailer.php and add your SMTP credentials
+ */
+
+// Import PHPMailer classes
+require 'updates/phpmailerw/PHPMailerAutoload.php';
+
+// Configuration
+define("RECIPIENT_NAME", "MyCiti Owners Association");
+define("RECIPIENT_EMAIL", "mycitiownersassociation@gmail.com");
+
+// SMTP Configuration - UPDATE THESE WITH YOUR CREDENTIALS
+define("SMTP_HOST", "smtp.gmail.com");  // Gmail SMTP server
+define("SMTP_PORT", 587);                // TLS port
+define("SMTP_USERNAME", "mycitiownersassociation@gmail.com"); // Your Gmail address
+define("SMTP_PASSWORD", "YOUR_APP_PASSWORD_HERE");  // ⚠️ REPLACE WITH YOUR GMAIL APP PASSWORD
+define("SMTP_SECURE", "tls");            // tls or ssl
+define("FROM_EMAIL", "mycitiownersassociation@gmail.com");
+define("FROM_NAME", "MyCiti Website Contact Form");
+
+// Read and sanitize form values
+$userName = isset($_POST['name']) ? htmlspecialchars(trim($_POST['name'])) : "";
+$senderEmail = isset($_POST['email']) ? filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL) : "";
+$senderPhone = isset($_POST['phone']) ? htmlspecialchars(trim($_POST['phone'])) : "";
+$userSubject = isset($_POST['subject']) ? htmlspecialchars(trim($_POST['subject'])) : "";
+$message = isset($_POST['message']) ? htmlspecialchars(trim($_POST['message'])) : "";
+
+// Validate required fields
+if (empty($userName) || empty($senderEmail) || empty($senderPhone) || empty($userSubject) || empty($message)) {
+    header('Location: index.html?message=Failed&error=missing_fields');
+    exit;
+}
+
+// Validate email format
+if (!filter_var($senderEmail, FILTER_VALIDATE_EMAIL)) {
+    header('Location: index.html?message=Failed&error=invalid_email');
+    exit;
+}
+
+try {
+    // Create new PHPMailer instance
+    $mail = new PHPMailer(true);
+    
+    // Server settings
+    $mail->isSMTP();
+    $mail->Host = SMTP_HOST;
+    $mail->SMTPAuth = true;
+    $mail->Username = SMTP_USERNAME;
+    $mail->Password = SMTP_PASSWORD;
+    $mail->SMTPSecure = SMTP_SECURE;
+    $mail->Port = SMTP_PORT;
+    
+    // If SMTP password is empty, try using PHP mail() as fallback
+    if (SMTP_PASSWORD === "YOUR_APP_PASSWORD_HERE" || empty(SMTP_PASSWORD)) {
+        $mail->isMail();
+    }
+    
+    // Recipients
+    $mail->setFrom(FROM_EMAIL, FROM_NAME);
+    $mail->addAddress(RECIPIENT_EMAIL, RECIPIENT_NAME);
+    $mail->addReplyTo($senderEmail, $userName);
+    
+    // Content
+    $mail->isHTML(true);
+    $mail->Subject = "New Contact Form Submission: " . $userSubject;
+    
+    // HTML email body
+    $mail->Body = "
+    <html>
+    <head>
+        <style>
+            body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+            .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+            .header { background: #4CAF50; color: white; padding: 20px; text-align: center; }
+            .content { background: #f9f9f9; padding: 20px; margin: 20px 0; border-radius: 5px; }
+            .field { margin-bottom: 15px; }
+            .label { font-weight: bold; color: #555; }
+            .value { margin-left: 10px; }
+            .footer { text-align: center; color: #777; font-size: 12px; margin-top: 20px; }
+        </style>
+    </head>
+    <body>
+        <div class='container'>
+            <div class='header'>
+                <h2>New Contact Form Submission</h2>
+                <p>MyCiti Layout, Bidadi Website</p>
+            </div>
+            <div class='content'>
+                <div class='field'>
+                    <span class='label'>Name:</span>
+                    <span class='value'>{$userName}</span>
+                </div>
+                <div class='field'>
+                    <span class='label'>Email:</span>
+                    <span class='value'>{$senderEmail}</span>
+                </div>
+                <div class='field'>
+                    <span class='label'>Phone:</span>
+                    <span class='value'>{$senderPhone}</span>
+                </div>
+                <div class='field'>
+                    <span class='label'>Service/Subject:</span>
+                    <span class='value'>{$userSubject}</span>
+                </div>
+                <div class='field'>
+                    <span class='label'>Message:</span>
+                    <div style='background: white; padding: 15px; margin-top: 10px; border-left: 3px solid #4CAF50;'>
+                        " . nl2br($message) . "
+                    </div>
+                </div>
+            </div>
+            <div class='footer'>
+                <p>This message was sent from the contact form at mycitibidadi.com</p>
+                <p>Received on " . date('F j, Y, g:i a') . "</p>
+            </div>
+        </div>
+    </body>
+    </html>
+    ";
+    
+    // Plain text alternative
+    $mail->AltBody = "
+    New Contact Form Submission - MyCiti Layout, Bidadi
+    
+    Name: {$userName}
+    Email: {$senderEmail}
+    Phone: {$senderPhone}
+    Service/Subject: {$userSubject}
+    
+    Message:
+    {$message}
+    
+    ---
+    Sent from mycitibidadi.com contact form
+    Date: " . date('F j, Y, g:i a');
+    
+    // Send email
+    $mail->send();
+    
+    // Success - redirect with success message
+    header('Location: index.html?message=Successfull');
+    exit;
+    
+} catch (Exception $e) {
+    // Log error for debugging
+    error_log("Contact form error: " . $mail->ErrorInfo);
+    
+    // Redirect with error
+    header('Location: index.html?message=Failed&error=smtp');
+    exit;
+}
+?>
