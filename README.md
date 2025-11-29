@@ -1,2 +1,0 @@
-# mycitibidadi
-MyCiti Bidadi Website
