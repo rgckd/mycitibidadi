@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Gallery - MyCiti Layout, Bidadi</title>
+	<title>News Updates - MyCiti Layout, Bidadi</title>
 	<meta name="author" content="MyCiti Layout, Bidadi">
-	<meta name="description" content="Photo gallery of MyCiti Layout, Bidadi - events, facilities, and community life">
-	<meta name="keywords" content="MyCiti Layout, Bidadi, Gallery, Photos, Community Events">
+	<meta name="description" content="Latest news and updates from MyCiti Layout, Bidadi - community announcements, events, and developments">
+	<meta name="keywords" content="MyCiti Layout, Bidadi, News, Updates, Community Events, Announcements">
 	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="assets/img/fv.png" type="image/x-icon">
@@ -17,165 +17,170 @@
 	<link rel="stylesheet" href="assets/css/video.min.css">
 	<link rel="stylesheet" href="assets/css/it-source.css">
 	<style>
-		.gallery-container {
+		.news-container {
 			background: #f8f9fa;
 			padding: 120px 0 80px;
 			min-height: calc(100vh - 300px);
-			margin-top: 0;
 		}
 		
-		.gallery-content-wrapper {
-			background: white;
-			padding: 60px 40px;
-			border-radius: 15px;
-			box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+		.news-header {
 			text-align: center;
-			max-width: 900px;
-			margin: 0 auto;
+			margin-bottom: 60px;
 		}
 		
-		.gallery-icon {
-			width: 120px;
-			height: 120px;
-			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-			border-radius: 50%;
-			margin: 0 auto 30px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-		}
-		
-		.gallery-icon i {
-			font-size: 60px;
-			color: white;
-		}
-		
-		.gallery-header h1 {
+		.news-header h1 {
 			font-size: 42px;
 			font-weight: 700;
 			color: #333;
-			margin-bottom: 20px;
+			margin-bottom: 15px;
 		}
 		
-		.gallery-header p {
+		.news-header p {
 			font-size: 18px;
 			color: #666;
-			line-height: 1.8;
+			max-width: 700px;
+			margin: 0 auto;
+		}
+		
+		.news-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+			gap: 30px;
 			margin-bottom: 40px;
 		}
 		
-		.gallery-features {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			gap: 25px;
-			margin: 40px 0;
-			text-align: left;
-		}
-		
-		.feature-item {
-			padding: 25px;
-			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		.news-card {
+			background: white;
 			border-radius: 12px;
-			color: white;
+			overflow: hidden;
+			box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 			transition: transform 0.3s, box-shadow 0.3s;
 		}
 		
-		.feature-item:hover {
+		.news-card:hover {
 			transform: translateY(-5px);
-			box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
+			box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 		}
 		
-		.feature-item i {
-			font-size: 32px;
+		.news-card-header {
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			padding: 20px;
 			color: white;
-			margin-bottom: 15px;
-			display: block;
 		}
 		
-		.feature-item h4 {
-			font-size: 18px;
-			font-weight: 600;
-			color: white;
+		.news-date {
+			font-size: 14px;
+			opacity: 0.9;
 			margin-bottom: 10px;
+			display: flex;
+			align-items: center;
 		}
 		
-		.feature-item p {
-			font-size: 15px;
-			color: rgba(255, 255, 255, 0.9);
+		.news-date i {
+			margin-right: 8px;
+		}
+		
+		.news-card-header h3 {
+			font-size: 22px;
+			font-weight: 600;
 			margin: 0;
-			line-height: 1.6;
+			color: white;
 		}
 		
-		.gallery-btn {
+		.news-card-body {
+			padding: 25px;
+		}
+		
+		.news-card-body p {
+			color: #666;
+			line-height: 1.8;
+			margin-bottom: 15px;
+		}
+		
+		.news-badge {
 			display: inline-block;
-			padding: 18px 50px;
+			padding: 5px 15px;
+			background: #667eea;
+			color: white;
+			border-radius: 20px;
+			font-size: 12px;
+			font-weight: 600;
+			text-transform: uppercase;
+			margin-top: 10px;
+		}
+		
+		.news-badge.event {
+			background: #28a745;
+		}
+		
+		.news-badge.announcement {
+			background: #ffc107;
+		}
+		
+		.news-badge.maintenance {
+			background: #dc3545;
+		}
+		
+		.external-updates {
+			background: white;
+			padding: 40px;
+			border-radius: 12px;
+			box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+			text-align: center;
+			margin-top: 40px;
+		}
+		
+		.external-updates h3 {
+			font-size: 24px;
+			font-weight: 600;
+			color: #333;
+			margin-bottom: 15px;
+		}
+		
+		.external-updates p {
+			color: #666;
+			margin-bottom: 25px;
+		}
+		
+		.external-link-btn {
+			display: inline-block;
+			padding: 15px 40px;
 			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 			color: white;
 			text-decoration: none;
 			border-radius: 50px;
-			font-size: 18px;
+			font-size: 16px;
 			font-weight: 600;
 			transition: all 0.3s;
-			box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-			margin-top: 20px;
+			box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
 		}
 		
-		.gallery-btn:hover {
+		.external-link-btn:hover {
 			transform: translateY(-3px);
-			box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+			box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
 			color: white;
 			text-decoration: none;
 		}
 		
-		.gallery-btn i {
-			margin-left: 10px;
-			transition: transform 0.3s;
-		}
-		
-		.gallery-btn:hover i {
-			transform: translateX(5px);
+		.external-link-btn i {
+			margin-left: 8px;
 		}
 		
 		@media (max-width: 768px) {
-			.gallery-container {
-				padding: 60px 0 40px;
+			.news-container {
+				padding: 80px 0 60px;
 			}
 			
-			.gallery-content-wrapper {
-				padding: 40px 30px;
-			}
-			
-			.gallery-header h1 {
+			.news-header h1 {
 				font-size: 32px;
 			}
 			
-			.gallery-icon {
-				width: 100px;
-				height: 100px;
-			}
-			
-			.gallery-icon i {
-				font-size: 50px;
-			}
-			
-			.gallery-features {
+			.news-grid {
 				grid-template-columns: 1fr;
 			}
-		}
-		
-		@media (max-width: 576px) {
-			.gallery-content-wrapper {
+			
+			.external-updates {
 				padding: 30px 20px;
-			}
-			
-			.gallery-header h1 {
-				font-size: 28px;
-			}
-			
-			.gallery-btn {
-				padding: 15px 40px;
-				font-size: 16px;
 			}
 		}
 	</style>
@@ -218,12 +223,12 @@
 							<li><a class="nav-link" href="owners.html">Owners</a></li>
 							<li><a class="nav-link" href="initiatives.html">Projects</a></li>
 							<li><a class="nav-link" href="index.html#it-up-testimonial">Association</a></li>
-							<li><a class="nav-link active" href="gallery.html">Gallery</a></li>
+							<li><a class="nav-link" href="gallery.html">Gallery</a></li>
 							<li><a class="nav-link" href="index.html#it-up-contact">Contact Us</a></li>
 						</ul>
 					</nav>
 					<div class="it-up-header-cta-btn float-right text-center">
-						<a href="news.html">News Updates</a>
+						<a href="news.html" class="active">News Updates</a>
 					</div>
 				</div>
 				<div class="mobile_menu relative-position">
@@ -246,9 +251,9 @@
 									<li><a class="nav-link" href="owners.html">Owners</a></li>
 									<li><a class="nav-link" href="initiatives.html">Projects</a></li>
 									<li><a class="nav-link" href="index.html#it-up-testimonial">Association</a></li>
-								<li><a class="nav-link" href="gallery.html">Gallery</a></li>
-								<li><a class="nav-link" href="index.html#it-up-contact">Contact Us</a></li>
-								<li><a class="nav-link" href="news.html">News Updates</a></li>
+									<li><a class="nav-link" href="gallery.html">Gallery</a></li>
+									<li><a class="nav-link" href="index.html#it-up-contact">Contact Us</a></li>
+									<li><a class="nav-link active" href="news.html">News Updates</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -259,49 +264,71 @@
 	</header>
 <!-- End of header section ============================================= -->
 
-<!-- Start of gallery section ============================================= -->
-	<section class="gallery-container">
+<!-- Start of news section ============================================= -->
+	<section class="news-container">
 		<div class="container">
-			<div class="gallery-content-wrapper">
-				<div class="gallery-icon">
-					<i class="fas fa-images"></i>
-				</div>
-				
-				<div class="gallery-header">
-					<h1>MyCiti Layout Photo Gallery</h1>
-					<p>Explore our collection of photos showcasing community events, facilities, celebrations, and the vibrant life at MyCiti Layout, Bidadi. View memories from our various activities, gatherings, and the beautiful moments that make our community special.</p>
-				</div>
-				
-				<div class="gallery-features">
-					<div class="feature-item">
-						<i class="fas fa-calendar-alt"></i>
-						<h4>Community Events</h4>
-						<p>Photos from festivals, celebrations, and special occasions</p>
+			<div class="news-header">
+				<h1>Latest News & Updates</h1>
+				<p>Stay informed about the latest happenings, events, and announcements from MyCiti Layout, Bidadi</p>
+			</div>
+			
+			<div class="news-grid">
+				<!-- Sample News Item 1 -->
+				<div class="news-card">
+					<div class="news-card-header">
+						<div class="news-date">
+							<i class="fas fa-calendar-alt"></i>
+							<span>November 2025</span>
+						</div>
+						<h3>Community Updates</h3>
 					</div>
-					<div class="feature-item">
-						<i class="fas fa-building"></i>
-						<h4>Facilities & Amenities</h4>
-						<p>Our infrastructure, parks, and common areas</p>
-					</div>
-					<div class="feature-item">
-						<i class="fas fa-users"></i>
-						<h4>Community Life</h4>
-						<p>Daily activities and social gatherings</p>
-					</div>
-					<div class="feature-item">
-						<i class="fas fa-sync-alt"></i>
-						<h4>Always Updated</h4>
-						<p>New photos added regularly from recent events</p>
+					<div class="news-card-body">
+						<p>Stay connected with the latest developments and initiatives at MyCiti Layout. Visit our dedicated updates portal for detailed information about ongoing projects, community events, and important announcements.</p>
+						<span class="news-badge">General</span>
 					</div>
 				</div>
 				
-				<a href="https://photos.app.goo.gl/XQNERoXqNmjK8jub6" target="_blank" rel="noopener noreferrer" class="gallery-btn">
-					View Photo Gallery <i class="fas fa-arrow-right"></i>
+				<!-- Sample News Item 2 -->
+				<div class="news-card">
+					<div class="news-card-header">
+						<div class="news-date">
+							<i class="fas fa-calendar-alt"></i>
+							<span>Ongoing</span>
+						</div>
+						<h3>Infrastructure Development</h3>
+					</div>
+					<div class="news-card-body">
+						<p>Various infrastructure improvement projects are underway to enhance the quality of life for all residents. Check our initiatives page for detailed information about current and upcoming projects.</p>
+						<span class="news-badge announcement">Updates</span>
+					</div>
+				</div>
+				
+				<!-- Sample News Item 3 -->
+				<div class="news-card">
+					<div class="news-card-header">
+						<div class="news-date">
+							<i class="fas fa-calendar-alt"></i>
+							<span>Regular</span>
+						</div>
+						<h3>Community Events</h3>
+					</div>
+					<div class="news-card-body">
+						<p>Join us for various community activities, festivals, and social gatherings throughout the year. View our gallery for photos from past events and stay tuned for upcoming celebrations.</p>
+						<span class="news-badge event">Events</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="external-updates">
+				<h3>Complete Updates Archive</h3>
+				<p>For detailed news articles, press releases, and comprehensive community updates, visit our dedicated updates portal.</p>
+				<a href="https://updates.mycitibidadi.com/" target="_blank" rel="noopener noreferrer" class="external-link-btn">
+					Visit Updates Portal <i class="fas fa-external-link-alt"></i>
 				</a>
 			</div>
 		</div>
 	</section>
-<!-- End of gallery section ============================================= -->
+<!-- End of news section ============================================= -->
 
 <!-- Start of Footer section ============================================= -->
 	<footer id="it-up-footer" class="it-up-footer-section">
@@ -342,6 +369,7 @@
 								<li><a href="owners.html">Owners</a></li>
 								<li><a href="initiatives.html">Projects</a></li>
 								<li><a href="gallery.html">Gallery</a></li>
+								<li><a href="news.html">News Updates</a></li>
 							</ul>
 						</div>
 					</div>
