@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Gallery - MyCiti Layout, Bidadi</title>
+	<meta name="author" content="MyCiti Layout, Bidadi">
+	<meta name="description" content="Photo gallery of MyCiti Layout, Bidadi - events, facilities, and community life">
+	<meta name="keywords" content="MyCiti Layout, Bidadi, Gallery, Photos, Community Events">
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="assets/img/fv.png" type="image/x-icon">
+	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<link rel="stylesheet" href="assets/css/fontawesome-all.css">
+	<link rel="stylesheet" href="assets/css/flaticon.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/video.min.css">
+	<link rel="stylesheet" href="assets/css/it-source.css">
+	<style>
+		.gallery-container {
+			background: #f8f9fa;
+			padding: 80px 0 60px;
+			min-height: calc(100vh - 300px);
+		}
+		
+		.gallery-header {
+			text-align: center;
+			margin-bottom: 50px;
+		}
+		
+		.gallery-header h1 {
+			font-size: 42px;
+			font-weight: 700;
+			color: #333;
+			margin-bottom: 15px;
+		}
+		
+		.gallery-header p {
+			font-size: 18px;
+			color: #666;
+			max-width: 700px;
+			margin: 0 auto;
+		}
+		
+		.gallery-frame-wrapper {
+			background: white;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+			margin-bottom: 40px;
+		}
+		
+		.gallery-iframe {
+			width: 100%;
+			height: 800px;
+			border: none;
+			border-radius: 5px;
+		}
+		
+		.gallery-info {
+			background: white;
+			padding: 30px;
+			border-radius: 10px;
+			box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+			text-align: center;
+		}
+		
+		.gallery-info h3 {
+			font-size: 24px;
+			font-weight: 600;
+			color: #333;
+			margin-bottom: 15px;
+		}
+		
+		.gallery-info p {
+			font-size: 16px;
+			color: #666;
+			margin-bottom: 20px;
+		}
+		
+		.external-link-btn {
+			display: inline-block;
+			padding: 12px 30px;
+			background: #4285f4;
+			color: white;
+			text-decoration: none;
+			border-radius: 5px;
+			font-weight: 600;
+			transition: background 0.3s;
+		}
+		
+		.external-link-btn:hover {
+			background: #357ae8;
+			color: white;
+			text-decoration: none;
+		}
+		
+		@media (max-width: 768px) {
+			.gallery-header h1 {
+				font-size: 32px;
+			}
+			
+			.gallery-iframe {
+				height: 600px;
+			}
+			
+			.gallery-container {
+				padding: 60px 0 40px;
+			}
+		}
+		
+		@media (max-width: 576px) {
+			.gallery-iframe {
+				height: 500px;
+			}
+			
+			.gallery-frame-wrapper {
+				padding: 10px;
+			}
+		}
+	</style>
+</head>
+
+<body class="s-it">
+	<div id="preloader"></div>
+	<div class="up">
+		<a href="#" class="scrollup text-center"><i class="fas fa-chevron-up"></i></a>
+	</div>
+	
+<!-- Start of header section ============================================= -->
+	<header id="it-header-up" class="it-header-up-seaction">
+		<div class="it-header-up-top clearfix"> 
+			<div class="container">
+				<div class="it-header-top-cta float-left">
+					<a href="#"><i class="fas fa-envelope"></i> mycitiownersassociation@gmail.com</a>
+					<a href="#"><i class="fas fa-phone"></i> +91 9900742192 </a>
+					<a href="https://maps.app.goo.gl/tZtpYUEQc9pqepqR9" target="_blank" rel="noopener noreferrer">  <i class="fas fa-map-marker-alt"></i> MyCiti Layout, Bidadi, Bengaluru </a>
+				</div>
+				<div class="it-header-top-social float-right">
+					<a href="https://www.facebook.com/profile.php?id=61582301592288" target="_blank"><i class="fab fa-facebook-f"></i></a>
+					<a href="https://x.com/myciti_bidadi" target="_blank"><i class="fab fa-twitter"></i></a>
+					<a href="https://www.instagram.com/myciti.bidadi" target="_blank"><i class="fab fa-instagram"></i></a>
+					<a href="https://youtube.com/@mycitibidadi" target="_blank"><i class="fab fa-youtube"></i></a>
+					<a href="https://threads.net/mycitibidadi" target="_blank"><i class="fab fa-threads"></i></a>
+				</div>
+			</div>
+		</div>
+		<div class="it-up-header-main">
+			<div class="container">
+				<div class="it-up-brand-logo float-left">
+					<a href="index.html"><img src="assets/img/fv.png" alt="Home" style="width:125px;height:60px; border:0;"></a>
+				</div>
+				<div class="it-up-main-menu-wrap clearfix">
+					<nav class="it-up-main-navigation float-left ul-li">
+						<ul id="main-nav" class="navbar-nav text-capitalize clearfix">
+							<li><a class="nav-link" href="index.html">Home</a></li>
+							<li><a class="nav-link" href="index.html#it-up-service">About Us</a></li>
+							<li><a class="nav-link" href="owners.html">Owners</a></li>
+							<li><a class="nav-link" href="initiatives.html">Projects</a></li>
+							<li><a class="nav-link" href="index.html#it-up-testimonial">Association</a></li>
+							<li><a class="nav-link active" href="gallery.html">Gallery</a></li>
+							<li><a class="nav-link" href="index.html#it-up-contact">Contact Us</a></li>
+						</ul>
+					</nav>
+					<div class="it-up-header-cta-btn float-right text-center">
+						<a href="https://updates.mycitibidadi.com/">News Updates</a>
+					</div>
+				</div>
+				<div class="mobile_menu relative-position">
+					<div class="mobile_menu_button it-up-open_mobile_menu">
+						<i class="fas fa-bars"></i>
+					</div>
+					<div class="it-up-mobile_menu_wrap">
+						<div class="mobile_menu_overlay it-up-open_mobile_menu"></div>
+						<div class="mobile_menu_content">
+							<div class="mobile_menu_close it-up-open_mobile_menu">
+								<i class="far fa-times-circle"></i>
+							</div>
+							<div class="m-brand-logo text-center">
+								<a href="index.html"><img src="assets/img/fv.png" style="width:125px;height:60px"></a>
+							</div>
+							<nav class="main-navigation mobile_menu-dropdown clearfix ul-li">
+								<ul id="main-nav" class="navbar-nav text-capitalize clearfix">
+									<li><a class="nav-link" href="index.html">Home</a></li>
+									<li><a class="nav-link" href="index.html#it-up-service">About Us</a></li>
+									<li><a class="nav-link" href="owners.html">Owners</a></li>
+									<li><a class="nav-link" href="initiatives.html">Projects</a></li>
+									<li><a class="nav-link" href="index.html#it-up-testimonial">Association</a></li>
+									<li><a class="nav-link active" href="gallery.html">Gallery</a></li>
+									<li><a class="nav-link" href="index.html#it-up-contact">Contact Us</a></li>
+									<li><a class="nav-link" href="https://updates.mycitibidadi.com/" target="_blank">Updates</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+<!-- End of header section ============================================= -->
+
+<!-- Start of gallery section ============================================= -->
+	<section class="gallery-container">
+		<div class="container">
+			<div class="gallery-header">
+				<h1>MyCiti Layout Gallery</h1>
+				<p>Browse through our collection of photos showcasing community events, facilities, and the vibrant life at MyCiti Layout, Bidadi</p>
+			</div>
+			
+			<div class="gallery-frame-wrapper">
+				<iframe 
+					src="https://photos.app.goo.gl/XQNERoXqNmjK8jub6" 
+					class="gallery-iframe"
+					loading="lazy"
+					title="MyCiti Layout Photo Gallery"
+					allowfullscreen>
+				</iframe>
+			</div>
+			
+			<div class="gallery-info">
+				<h3>View Full Gallery</h3>
+				<p>For the best viewing experience with all Google Photos features, you can also open the gallery in a new window.</p>
+				<a href="https://photos.app.goo.gl/XQNERoXqNmjK8jub6" target="_blank" rel="noopener noreferrer" class="external-link-btn">
+					<i class="fas fa-external-link-alt"></i> Open in Google Photos
+				</a>
+			</div>
+		</div>
+	</section>
+<!-- End of gallery section ============================================= -->
+
+<!-- Start of Footer section ============================================= -->
+	<footer id="it-up-footer" class="it-up-footer-section">
+		<div class="it-up-footer-newslatter text-center">
+			<div class="container">
+				<div class="it-up-footer-newslatter-content">
+					<h2 class="text-white">Subscribe for Newsletter</h2>
+					<div class="it-up-footer-newslatter-form">
+						<form action="#">
+							<input type="email" placeholder="Email Address">
+							<button type="submit">Subscribe Now</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="it-up-footer-widget-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6">
+						<div class="it-up-footer-widget">
+							<div class="it-up-footer-logo">
+								<img src="assets/img/fv.png" style="width:150px;height:85px" alt="MyCiti Layout Logo">
+							</div>
+							<div class="it-up-footer-about-text">
+								MyCiti Layout is a premier residential community in Bidadi, offering modern living spaces with excellent infrastructure and amenities.
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="it-up-footer-widget">
+							<div class="it-up-footer-menu-title">
+								<h3 class="it-up-footer-title">Quick Links</h3>
+							</div>
+							<ul class="it-up-footer-menu">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="index.html#it-up-service">About Us</a></li>
+								<li><a href="owners.html">Owners</a></li>
+								<li><a href="initiatives.html">Projects</a></li>
+								<li><a href="gallery.html">Gallery</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="it-up-footer-widget">
+							<div class="it-up-footer-menu-title">
+								<h3 class="it-up-footer-title">Contact Info</h3>
+							</div>
+							<div class="it-up-footer-contact-info">
+								<div class="it-up-footer-contact-item">
+									<div class="it-up-footer-contact-icon">
+										<i class="fas fa-phone"></i>
+									</div>
+									<div class="it-up-footer-contact-text">
+										<a href="tel:+919900742192">+91 9900742192</a>
+									</div>
+								</div>
+								<div class="it-up-footer-contact-item">
+									<div class="it-up-footer-contact-icon">
+										<i class="fas fa-envelope"></i>
+									</div>
+									<div class="it-up-footer-contact-text">
+										<a href="mailto:mycitiownersassociation@gmail.com">mycitiownersassociation@gmail.com</a>
+									</div>
+								</div>
+								<div class="it-up-footer-contact-item">
+									<div class="it-up-footer-contact-icon">
+										<i class="fas fa-map-marker-alt"></i>
+									</div>
+									<div class="it-up-footer-contact-text">
+										<a href="https://maps.app.goo.gl/tZtpYUEQc9pqepqR9" target="_blank">MyCiti Layout, Bidadi, Bengaluru</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="it-up-footer-widget">
+							<div class="it-up-footer-menu-title">
+								<h3 class="it-up-footer-title">Follow Us</h3>
+							</div>
+							<div class="it-up-footer-social">
+								<a href="https://www.facebook.com/profile.php?id=61582301592288" target="_blank"><i class="fab fa-facebook-f"></i></a>
+								<a href="https://x.com/myciti_bidadi" target="_blank"><i class="fab fa-twitter"></i></a>
+								<a href="https://www.instagram.com/myciti.bidadi" target="_blank"><i class="fab fa-instagram"></i></a>
+								<a href="https://youtube.com/@mycitibidadi" target="_blank"><i class="fab fa-youtube"></i></a>
+								<a href="https://threads.net/mycitibidadi" target="_blank"><i class="fab fa-threads"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="it-up-footer-copyright text-center">
+			© 2006 - <script>document.write(new Date().getFullYear())</script> MyCiti Layout, Bidadi. All Rights Reserved.
+		</div>
+	</footer>
+<!-- End of Footer section ============================================= -->
+
+	<!-- JS library -->
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<script src="assets/js/appear.js"></script>
+	<script src="assets/js/gmaps.js"></script>
+	<script src="assets/js/it-source.js"></script>
+</body>
+</html>
