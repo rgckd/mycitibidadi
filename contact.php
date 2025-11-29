@@ -1,24 +1,60 @@
 <?php
+/**
+ * Contact Form Handler with Security Enhancements
+ * CSRF protection, rate limiting, improved validation
+ */
 
-// Define some constants
-define( "RECIPIENT_NAME", "MyCiti Owners Association" );
-define( "RECIPIENT_EMAIL", "mycitiownersassociation@gmail.com" );
+require_once 'includes/security.php';
 
-// Read the form values
-$userName = isset( $_POST['name'] ) ? preg_replace( "/[^\s\S\.\-\_\@a-zA-Z0-9]/", "", $_POST['name'] ) : "";
-$senderEmail = isset( $_POST['email'] ) ? preg_replace( "/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['email'] ) : "";
-$senderPhone = isset( $_POST['phone'] ) ? preg_replace( "/[^\.\-\_\@a-zA-Z0-9\+\s]/", "", $_POST['phone'] ) : "";
-$isOwner = isset( $_POST['is_owner'] ) ? preg_replace( "/[^\s\S\.\-\_\@a-zA-Z0-9]/", "", $_POST['is_owner'] ) : "";
-$plotNumbers = isset( $_POST['plot_numbers'] ) ? preg_replace( "/[^\s\S\.\-\_\@a-zA-Z0-9,]/", "", $_POST['plot_numbers'] ) : "";
-$phases = isset( $_POST['phases'] ) ? preg_replace( "/[^\s\S\.\-\_\@a-zA-Z0-9,]/", "", $_POST['phases'] ) : "";
-$userSubject = isset( $_POST['subject'] ) ? preg_replace( "/[^\s\S\.\-\_\@a-zA-Z0-9]/", "", $_POST['subject'] ) : "";
-$message = isset( $_POST['message'] ) ? preg_replace( "/(From:|To:|BCC:|CC:|Subject:|Content-Type:)/", "", $_POST['message'] ) : "";
+// Set security headers
+setSecurityHeaders();
 
-// If all required values exist, send the email
-if ( $userName && $senderEmail && $senderPhone && $isOwner && $userSubject && $message) {
-  $recipient = RECIPIENT_NAME . " <" . RECIPIENT_EMAIL . ">";
-  $headers = "From: contact@mycitibidadi.com\r\nReply-To: " . $senderEmail;
-  $subject = "New Contact Form: " . $userSubject;
+// Define constants
+define("RECIPIENT_NAME", "MyCiti Owners Association");
+define("RECIPIENT_EMAIL", "mycitiownersassociation@gmail.com");
+
+// Validate CSRF token
+if (!isset($_POST['csrf_token']) || !validateCSRFToken($_POST['csrf_token'])) {
+    header('Location: index.html?message=Failed&error=invalid_request');
+    exit;
+}
+
+// Rate limiting - max 3 submissions per 5 minutes per IP
+$clientIP = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+if (isRateLimited($clientIP, 3, 300)) {
+    header('Location: index.html?message=Failed&error=too_many_attempts');
+    exit;
+}
+
+// Read and validate form values
+$userName = isset($_POST['name']) ? sanitizeText($_POST['name'], 100) : "";
+$senderEmail = isset($_POST['email']) ? trim($_POST['email']) : "";
+$senderPhone = isset($_POST['phone']) ? sanitizePhone($_POST['phone']) : "";
+$isOwner = isset($_POST['is_owner']) ? sanitizeText($_POST['is_owner'], 10) : "";
+$plotNumbers = isset($_POST['plot_numbers']) ? sanitizeText($_POST['plot_numbers'], 200) : "";
+$phases = isset($_POST['phases']) ? sanitizeText($_POST['phases'], 200) : "";
+$userSubject = isset($_POST['subject']) ? sanitizeText($_POST['subject'], 200) : "";
+$message = isset($_POST['message']) ? sanitizeMessage($_POST['message'], 5000) : "";
+
+// Validate email format and prevent header injection
+if (!validateEmail($senderEmail)) {
+    header('Location: index.html?message=Failed&error=invalid_email');
+    exit;
+}
+
+// Validate required fields
+if (empty($userName) || empty($senderEmail) || empty($senderPhone) || empty($isOwner) || empty($userSubject) || empty($message)) {
+    header('Location: index.html?message=Failed&error=missing_fields');
+    exit;
+}
+
+// Send the email
+$recipient = RECIPIENT_NAME . " <" . RECIPIENT_EMAIL . ">";
+// Use safe headers with validated email
+$headers = "From: contact@mycitibidadi.com\r\n";
+$headers .= "Reply-To: " . filter_var($senderEmail, FILTER_SANITIZE_EMAIL) . "\r\n";
+$headers .= "X-Mailer: PHP/" . phpversion();
+$subject = "New Contact Form: " . $userSubject;
   
   // Build message body with owner information
   $msgBody = "Name: ". $userName . "\nEmail: ". $senderEmail . "\nPhone: ". $senderPhone . "\n";
@@ -34,18 +70,23 @@ if ( $userName && $senderEmail && $senderPhone && $isOwner && $userSubject && $m
   }
   
   $msgBody .= "Subject: ". $userSubject . "\n\nMessage:\n" . $message;
-  $success = mail( $recipient, $subject, $msgBody, $headers );
 
-  //Set Location After Successsfull Submission
-  if($success) {
+// Add submission metadata for security tracking
+$msgBody .= "\n\n---\nSubmission Details:\n";
+$msgBody .= "IP: " . $clientIP . "\n";
+$msgBody .= "User Agent: " . htmlspecialchars($_SERVER['HTTP_USER_AGENT'] ?? 'Unknown', ENT_QUOTES, 'UTF-8') . "\n";
+$msgBody .= "Date: " . date('Y-m-d H:i:s') . "\n";
+
+$success = mail($recipient, $subject, $msgBody, $headers);
+
+// Set Location After Submission
+if ($success) {
     header('Location: index.html?message=Successfull');
-  } else {
+} else {
+    // Log error for debugging (without exposing details to user)
+    error_log("Contact form: Mail send failed for " . $senderEmail);
     header('Location: index.html?message=Failed&error=smtp');
-  }
-}
-else{
-	//Set Location After Unsuccesssfull Submission
-  	header('Location: index.html?message=Failed&error=missing_fields');	
 }
 
+exit;
 ?>

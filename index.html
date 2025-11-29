@@ -616,6 +616,9 @@ https://x.com/myciti_bidadi" target="_blank"><i class="fab fa-twitter"></i></a>
 					<div class="col-lg-7">
 						<div class="it-up-form-wrap">
 							<form action="contact.php" method="POST" id="contactForm">
+								<!-- CSRF token will be added via JavaScript -->
+								<input type="hidden" name="csrf_token" value="">
+								
 								<div class="it-up-form-input">
 									<div class="row">
 										<div class="col-md-6">
@@ -891,9 +894,29 @@ Bengaluru Rural District</a>
 	<script src="assets/js/typer-new.js"></script>
 	<script src="assets/js/it-source.js"></script>
 	
+	<!-- CSRF Token Generator -->
+	<script>
+	// Generate CSRF token on page load
+	(function() {
+		fetch('get-csrf-token.php')
+			.then(response => response.json())
+			.then(data => {
+				if (data.token) {
+					const form = document.getElementById('contactForm');
+					if (form) {
+						let tokenInput = form.querySelector('input[name="csrf_token"]');
+						if (tokenInput) {
+							tokenInput.value = data.token;
+						}
+					}
+				}
+			})
+			.catch(error => console.error('CSRF token error:', error));
+	})();
+	</script>
+	
 	<!-- Contact Form Confirmation Script -->
 	<script>
-		// Check for success/error message in URL
 		$(document).ready(function() {
 			const urlParams = new URLSearchParams(window.location.search);
 			const message = urlParams.get('message');
@@ -928,16 +951,29 @@ Bengaluru Rural District</a>
 					window.history.replaceState({}, document.title, cleanUrl);
 				}
 			} else if (message === 'Failed') {
-				// Show error popup
+				// Show error popup - Sanitize error type to prevent XSS
 				const errorType = urlParams.get('error') || 'unknown';
+				const allowedErrors = ['missing_fields', 'invalid_email', 'smtp', 'invalid_request', 'too_many_attempts'];
+				const safeErrorType = allowedErrors.includes(errorType) ? errorType : 'unknown';
+				
 				let errorMessage = 'There was an error sending your message. Please try again.';
 				
-				if (errorType === 'missing_fields') {
-					errorMessage = 'Please fill in all required fields.';
-				} else if (errorType === 'invalid_email') {
-					errorMessage = 'Please enter a valid email address.';
-				} else if (errorType === 'smtp') {
-					errorMessage = 'Email service is temporarily unavailable. Please try again later or contact us at mycitiownersassociation@gmail.com';
+				switch(safeErrorType) {
+					case 'missing_fields':
+						errorMessage = 'Please fill in all required fields.';
+						break;
+					case 'invalid_email':
+						errorMessage = 'Please enter a valid email address.';
+						break;
+					case 'invalid_request':
+						errorMessage = 'Invalid form submission. Please refresh the page and try again.';
+						break;
+					case 'too_many_attempts':
+						errorMessage = 'Too many submission attempts. Please wait 5 minutes before trying again.';
+						break;
+					case 'smtp':
+						errorMessage = 'Email service is temporarily unavailable. Please try again later or contact us at mycitiownersassociation@gmail.com';
+						break;
 				}
 				
 				const errorHtml = `
