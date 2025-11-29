@@ -1,0 +1,8 @@
+RewriteEngine on
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} (www\.)?mycitibidadi.com
+RewriteRule ^([^\.]+)$ $1.html [NC, L]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTP_HOST} (www\.)?mycitibidadi.com
+
+ErrorDocument 404 /404.html
