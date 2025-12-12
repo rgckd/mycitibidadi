@@ -573,6 +573,7 @@ include 'includes/header.php';
 										<option value="Purchase a site">Purchase a site</option>
 										<option value="Member Registration">Member Registration</option>
 										<option value="eKhata">eKhata</option>
+										<option value="No Objection Certificate (NOC)">No Objection Certificate (NOC)</option>
 										<option value="Other">Other</option>
 									</select>
 								</div>
