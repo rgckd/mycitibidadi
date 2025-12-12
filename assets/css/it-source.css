@@ -825,6 +825,8 @@ select:visited {
 .it-up-about-ft-item {
   width: 50%;
   float: left;
+  padding: 15px;
+  box-sizing: border-box;
 }
 .it-up-about-ft-item .it-up-about-ft-icon {
   width: 60px;
