@@ -132,6 +132,52 @@
 				max-width: 100%;
 			}
 		}
+		
+		/* Banner Image Containment */
+		.it-up-banner-img {
+			max-width: 100%;
+			overflow: hidden;
+		}
+		
+		.it-up-banner-img img {
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+			display: block;
+		}
+		
+		.it-up-banner-img iframe {
+			max-width: 100%;
+		}
+		
+		/* Ensure banner content layout doesn't bleed */
+		.it-up-banner-content {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 30px;
+			align-items: flex-start;
+		}
+		
+		.it-up-banner-text {
+			flex: 1 1 45%;
+			min-width: 0;
+		}
+		
+		.it-up-banner-img {
+			flex: 1 1 45%;
+			min-width: 0;
+		}
+		
+		@media (max-width: 991px) {
+			.it-up-banner-content {
+				flex-direction: column;
+			}
+			
+			.it-up-banner-text,
+			.it-up-banner-img {
+				flex: 1 1 100%;
+			}
+		}
 	</style>
 </head>
 
