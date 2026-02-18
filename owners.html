@@ -137,39 +137,39 @@
 		.it-up-banner-img {
 			max-width: 100%;
 			overflow: hidden;
-		}
-		
-		.it-up-banner-img img {
-			width: 100%;
-			max-width: 100%;
-			height: auto;
-			display: block;
-		}
-		
-		.it-up-banner-img iframe {
-			max-width: 100%;
-		}
-		
-		/* Ensure banner content layout doesn't bleed */
-		.it-up-banner-content {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 30px;
-			align-items: flex-start;
-		}
-		
-		.it-up-banner-text {
-			flex: 1 1 45%;
-			min-width: 0;
-		}
-		
-		.it-up-banner-img {
-			flex: 1 1 45%;
-			min-width: 0;
-		}
-		
-		@media (max-width: 991px) {
-			.it-up-banner-content {
+		position: relative;
+	}
+	
+	.it-up-banner-img img {
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+		display: block;
+	}
+	
+	.it-up-banner-img iframe {
+		max-width: 100%;
+	}
+	
+	/* Ensure banner content layout doesn't bleed */
+	.it-up-banner-content {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 30px;
+		align-items: flex-start;
+		overflow: hidden;
+	}
+	
+	.it-up-banner-text {
+		flex: 1 1 45%;
+		min-width: 0;
+		max-width: 100%;
+	}
+	
+	.it-up-banner-img {
+		flex: 1 1 45%;
+		min-width: 0;
+		max-width: 100%;
 				flex-direction: column;
 			}
 			
@@ -269,7 +269,7 @@ https://x.com/myciti_bidadi" target="_blank"><i class="fab fa-twitter"></i></a>
 		<span class="it-up-banner-deco3 position-absolute"> <img src="assets/img/its/b-shape2.png" alt=""></span>
 		<span class="it-up-banner-deco4 position-absolute"> <img src="assets/img/its/b-shape3.png" alt=""></span>
 		<div class="container">
-			<div class="it-up-banner-content position-relative">
+			<div class="it-up-banner-content">
 				<div class="it-up-banner-text headline-1 pera-content">
 					
 					<!-- Owners Info Box -->
@@ -301,9 +301,7 @@ https://x.com/myciti_bidadi" target="_blank"><i class="fab fa-twitter"></i></a>
 					<div style="margin-top: 20px;">
 						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.9472896707!2d77.3725908!3d12.7752798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae4fdc14ac90b1%3A0x445d6f08d704d1a8!2sMyCiti%20owners%20association!5e0!3m2!1sen!2sin!4v1708287600000!5m2!1sen!2sin" width="100%" height="350" style="border:0; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.15);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 					</div>
-					<span class="it-up-img-deco1 position-absolute" data-parallax='{"x" : -70}'> <img src="assets/img/its/slack.png" alt=""></span>
-					<span class="it-up-img-deco2 position-absolute" data-parallax='{"y" : -70}'> <img src="assets/img/its/dimond.png" alt=""></span>
-					<span class="it-up-img-deco3 position-absolute" data-parallax='{"y" : 70}'> <img src="assets/img/its/en.png" alt=""></span>
+
 				</div>
 			</div>
 		</div>
