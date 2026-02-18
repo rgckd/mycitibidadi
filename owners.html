@@ -104,24 +104,32 @@
 		
 		/* QR Code Styling */
 		.it-up-about-img-wrap img {
-			max-width: 100%;
+			width: 100%;
+			max-width: 450px;
 			height: auto;
-			min-width: 550px;
 			box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 			border-radius: 10px;
 			padding: 10px;
 			background: white;
 		}
 		
-		@media (max-width: 768px) {
+		.it-up-about-img {
+			margin-right: 30px;
+		}
+		
+		@media (max-width: 991px) {
+			.it-up-about-img {
+				margin-right: 0;
+				margin-bottom: 30px;
+			}
 			.it-up-about-img-wrap img {
-				min-width: 400px;
+				max-width: 400px;
 			}
 		}
 		
 		@media (max-width: 480px) {
 			.it-up-about-img-wrap img {
-				min-width: 280px;
+				max-width: 100%;
 			}
 		}
 	</style>
