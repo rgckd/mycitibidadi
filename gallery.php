@@ -293,12 +293,12 @@
 						<li><a class="nav-link" href="owners.html">Owners</a></li>
 						<li><a class="nav-link" href="initiatives.html">Projects</a></li>
 						<li><a class="nav-link" href="index.html#it-up-testimonial">Association</a></li>
-						<li><a class="nav-link active" href="https://mycitibidadi.com/gallery.html">Gallery</a></li>
+						<li><a class="nav-link active" href="https://mycitibidadi.com/gallery.php">Gallery</a></li>
 							<li><a class="nav-link" href="index.html#it-up-contact">Contact Us</a></li>
 						</ul>
 					</nav>
 					<div class="it-up-header-cta-btn float-right text-center">
-						<a href="news.html">News Updates</a>
+						<a href="news.php">News Updates</a>
 					</div>
 				</div>
 				<div class="mobile_menu relative-position">
@@ -321,9 +321,9 @@
 									<li><a class="nav-link" href="owners.html">Owners</a></li>
 									<li><a class="nav-link" href="initiatives.html">Projects</a></li>
 									<li><a class="nav-link" href="index.html#it-up-testimonial">Association</a></li>
-									<li><a class="nav-link" href="https://mycitibidadi.com/gallery.html">Gallery</a></li>
+									<li><a class="nav-link" href="https://mycitibidadi.com/gallery.php">Gallery</a></li>
 								<li><a class="nav-link" href="index.html#it-up-contact">Contact Us</a></li>
-								<li><a class="nav-link" href="news.html">News Updates</a></li>
+								<li><a class="nav-link" href="news.php">News Updates</a></li>
 								</ul>
 							</nav>
 						</div>

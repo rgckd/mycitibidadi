@@ -76,7 +76,7 @@ $current_page = isset($current_page) ? $current_page : 'home';
 								<li><a class="nav-link" href="<?php echo SITE_URL; ?>#it-up-testimonial">Association</a></li>
 							<?php endif; ?>
 							
-							<li><a class="nav-link" href="gallery.html">Gallery</a></li>
+							<li><a class="nav-link" href="gallery.php">Gallery</a></li>
 							
 							<?php if ($current_page === 'home'): ?>
 								<li><a class="nav-link" href="#it-up-contact">Contact Us</a></li>
@@ -109,7 +109,7 @@ $current_page = isset($current_page) ? $current_page : 'home';
 									<li><a class="nav-link" href="<?php echo SITE_URL; ?>owners">Owners</a></li>
 									<li><a class="nav-link" href="<?php echo SITE_URL; ?>initiatives">Projects</a></li>
 									<li><a class="nav-link" href="<?php echo SITE_URL; ?>#it-up-testimonial">Association</a></li>
-									<li><a class="nav-link" href="gallery.html">Gallery</a></li>
+									<li><a class="nav-link" href="gallery.php">Gallery</a></li>
 									<li><a class="nav-link" href="<?php echo SITE_URL; ?>#it-up-contact">Contact Us</a></li>
 									<li><a class="nav-link" href="<?php echo UPDATES_URL; ?>" target="_blank">Updates</a></li>
 								</ul>
