@@ -744,6 +744,9 @@ Bengaluru Rural District</a>
 									<li>
 										<i class="fas fa-phone"></i><a href="#">+91 9900742192, Chandre Gowda</a>
 									</li>
+									<li>
+										<i class="fas fa-envelope"></i><a href="mailto:mycitiownersassociation@gmail.com">mycitiownersassociation@gmail.com</a>
+									</li>
 								</ul>
 								<div class="office-open-hour">
 									<span>Open Hours: </span>
