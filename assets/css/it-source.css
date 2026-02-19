@@ -1778,8 +1778,9 @@ select:visited {
   color: #97a0b5;
   display: block;
   font-size: 14px;
-  overflow: hidden;
-  max-width: 170px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 .it-up-footer-widget .it-up-footer-info-widget .office-open-hour {
   margin-top: 10px;
