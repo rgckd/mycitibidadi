@@ -8,9 +8,6 @@
 	<meta name="keywords" content="MyCiti Layout, Bidadi, News, Updates, Community Events, Announcements">
 	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="canonical" href="https://mycitibidadi.com/news.php">
-	<meta http-equiv="refresh" content="0; url=news.php">
-	<script>window.location.replace('news.php');</script>
 	<link rel="shortcut icon" href="assets/img/fv.png" type="image/x-icon">
 	<link rel="stylesheet" href="assets/css/owl.carousel.css">
 	<link rel="stylesheet" href="assets/css/fontawesome-all.css">
@@ -438,98 +435,4 @@
 	</section>
 <!-- End of news section ============================================= -->
 
-<!-- Start of footer section
-	============================================= -->
-	<section id="it-up-footer" class="it-up-footer-section position-relative">
-		<div class="container">
-			<div class="it-up-footer-content-wrap">
-				<div class="row">
-					<div class="col-lg-3 col-md-6">
-						<div class="it-up-footer-widget headline-1 pera-content">
-							<div class="it-up-footer-logo-widget it-up-headline pera-content">
-								<div class="it-up-footer-logo">
-								<img src="assets/img/MyCiti_Website_Logo.png" style="width:125px;height:60px">
-								</div>
-								<p>MyCiti Layout, Bidadi, Secure your slice of tranquility. The approved layout of MyCiti at the most hot and sought location! Close to Bidadi Railway station, NHAI express way and Upcoming Largest AI City.</p>
-								<a class="footer-logo-btn text-center text-capitalize" "nav-link" href="https://mycitibidadi.com/#it-up-contact">Get In Touch <i class="fas fa-arrow-right"></i> </a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6">
-						<div class="it-up-footer-widget headline-1 pera-content">
-							<div class="it-up-footer-newslatter-widget pera-content">
-								<h3 class="widget-title">Social Media</h3>
-																<div class="it-up-footer-social ul-li">
-									<ul>
-										<li><a href="https://www.facebook.com/profile.php?id=61582301592288" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-										<li><a href="https://x.com/myciti_bidadi" target="_blank"><i class="fab fa-twitter"></i></a></li>
-										<li><a href="https://www.instagram.com/myciti.bidadi" target="_blank"><i class="fab fa-instagram"></i></a></li>
-										<li><a href="https://youtube.com/@mycitibidadi" target="_blank"><i class="fab fa-youtube"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6">
-						<div class="it-up-footer-widget headline-1 pera-content">
-							<div class="it-up-footer-info-widget ul-li">
-								<h3 class="widget-title">Official info:</h3>
-								<ul>
-									<li>
-										<i class="fas fa-map-marker-alt"></i> 
-										<a href="#">MyCiti, Heggadagere Village,
-Bidadi Hobli, Ramanagar Taluk,
-Bengaluru Rural District</a>
-									</li>
-									<li>
-										<i class="fas fa-phone"></i><a href="#">+91 9900742192, Chandre Gowda</a>
-									</li>
-								</ul>
-								<div class="office-open-hour">
-									<span>Open Hours: </span>
-									<p>Mon - Sun: 9 am - 5 pm
-																											</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6">
-						<div class="it-up-footer-widget headline-1 pera-content">
-							<div class="it-up-footer-instagram-widget">
-								<h3 class="widget-title">Instagram</h3>
-								<div class="insta-feed ul-li clearfix">
-									<ul>
-										<li><a href="https://www.instagram.com/p/DQBuIKKjvnp/?img_index=1" target="_blank"><img src="assets/img/ins1.jpg" alt=""><i class="fab fa-instagram"></i></a></li>
-										<li><a href="https://www.instagram.com/p/DQBttS-DgJC/?img_index=1" target="_blank"><img src="assets/img/ins2.jpg" alt=""><i class="fab fa-instagram"></i></a></li>
-										<li><a href="https://www.instagram.com/p/DQHcAJxgcp9/" target="_blank"><img src="assets/img/ins3.jpg" alt=""><i class="fab fa-instagram"></i></a></li>
-										<li><a href="https://www.instagram.com/p/DQBah0Bjv28/?img_index=1" target="_blank"><img src="assets/img/ins4.jpg" alt=""><i class="fab fa-instagram"></i></a></li>
-										<li><a href="https://www.instagram.com/p/DQE9ix1gZNV/?img_index=1" target="_blank"><img src="assets/img/ins5.jpg" alt=""><i class="fab fa-instagram"></i></a></li>
-										<li><a href="https://www.instagram.com/p/DQPb25FE-sP" target="_blank"><img src="assets/img/ins6.jpg" alt=""><i class="fab fa-instagram"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="it-up-footer-copyright text-center pera-content">
-			<div class="container">
-				<p>© 2006 - 2026
-	<meta name="keywords" content="Real Estate, Property, "> MyCiti Layout, Bidadi. All rights reserved.</p>
-			</div>
-		</div>
-	</section>
-<!-- End of footer section
-	============================================= -->
-
-	<!-- JS library -->
-	<script src="assets/js/jquery.js"></script>
-	<script src="assets/js/popper.min.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/owl.carousel.min.js"></script>
-	<script src="assets/js/appear.js"></script>
-	<script src="assets/js/gmaps.js"></script>
-	<script src="assets/js/it-source.js"></script>
-</body>
-</html>
+<?php include 'includes/footer.php'; ?>
