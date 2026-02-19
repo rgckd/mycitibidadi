@@ -19,7 +19,7 @@
 	<style>
 		.gallery-container {
 			background: #f8f9fa;
-			padding: 120px 0 260px;
+			padding: 120px 0 80px;
 			min-height: calc(100vh - 300px);
 			margin-top: 0;
 			position: relative;
@@ -29,6 +29,12 @@
 		#it-up-footer {
 			position: relative;
 			z-index: 1;
+			overflow: hidden;
+		}
+
+		#it-up-footer:before {
+			top: 0;
+			height: 100%;
 		}
 		
 		.gallery-content-wrapper {
@@ -177,7 +183,7 @@
 		
 		@media (max-width: 768px) {
 			.gallery-container {
-				padding: 60px 0 200px;
+				padding: 60px 0 40px;
 			}
 			
 			.gallery-content-wrapper {
