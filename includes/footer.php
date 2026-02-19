@@ -51,9 +51,6 @@ global $instagram_posts;
 									<li>
 										<i class="fas fa-phone"></i><a href="tel:<?php echo str_replace(['+', ' '], '', CONTACT_PHONE); ?>"><?php echo CONTACT_PHONE_DISPLAY; ?></a>
 									</li>
-									<li>
-										<i class="fas fa-envelope"></i><a href="mailto:<?php echo CONTACT_EMAIL; ?>"><?php echo CONTACT_EMAIL; ?></a>
-									</li>
 								</ul>
 								<div class="office-open-hour">
 									<span>Open Hours: </span>
