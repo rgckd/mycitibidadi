@@ -25,18 +25,6 @@
 			display: flex;
 			align-items: center;
 			gap: 20px;
-			animation: fadeInDown 0.8s ease-out;
-		}
-		
-		@keyframes fadeInDown {
-			from {
-				opacity: 0;
-				transform: translateY(-20px);
-			}
-			to {
-				opacity: 1;
-				transform: translateY(0);
-			}
 		}
 		
 		.owners-info-box .info-icon {
@@ -133,49 +121,52 @@
 			}
 		}
 		
-		/* Banner Image Containment */
-		.it-up-banner-img {
-			max-width: 100%;
+		/* Banner layout */
+		.it-up-banner-content {
+			display: block;
 			overflow: hidden;
-		position: relative;
-	}
-	
-	.it-up-banner-img img {
-		width: 100%;
-		max-width: 100%;
-		height: auto;
-		display: block;
-	}
-	
-	.it-up-banner-img iframe {
-		max-width: 100%;
-	}
-	
-	/* Ensure banner content layout doesn't bleed */
-	.it-up-banner-content {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 30px;
-		align-items: flex-start;
-		overflow: hidden;
-	}
-	
-	.it-up-banner-text {
-		flex: 1 1 45%;
-		min-width: 0;
-		max-width: 100%;
-	}
-	
-	.it-up-banner-img {
-		flex: 1 1 45%;
-		min-width: 0;
-		max-width: 100%;
-				flex-direction: column;
-			}
-			
-			.it-up-banner-text,
+		}
+
+		.it-up-banner-text,
+		.it-up-banner-img {
+			width: 100%;
+			min-width: 0;
+			max-width: 100%;
+		}
+
+		.it-up-banner-img {
+			position: relative;
+			top: 0 !important;
+			right: auto !important;
+			overflow: hidden;
+			margin-top: 20px;
+			padding-top: 0 !important;
+			padding-bottom: 0 !important;
+			min-height: 0 !important;
+			height: auto !important;
+		}
+
+		.it-up-banner-img img {
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+			display: block;
+		}
+
+		.it-up-banner-img iframe {
+			max-width: 100%;
+		}
+
+		.it-up-banner-deco1,
+		.it-up-banner-deco2,
+		.it-up-banner-deco3,
+		.it-up-banner-deco4 {
+			display: none;
+		}
+
+		@media (max-width: 991px) {
 			.it-up-banner-img {
-				flex: 1 1 100%;
+				margin-top: 15px;
 			}
 		}
 	</style>
