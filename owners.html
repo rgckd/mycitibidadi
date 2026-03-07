@@ -194,18 +194,36 @@
 			margin: 0;
 		}
 
-		.owners-testimonial-wrap .owl-dots {
+		.owners-testimonial-wrap .owl-nav {
 			margin-top: 15px;
 			text-align: left;
 		}
 
-		.owners-testimonial-wrap .owl-theme .owl-dots .owl-dot span {
-			background: #cdd5ff;
+		.owners-testimonial-wrap .owl-theme .owl-nav [class*='owl-'] {
+			background: #667eea;
+			color: #fff;
+			width: 38px;
+			height: 38px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			line-height: 1;
+			border-radius: 50%;
+			font-size: 20px;
+			font-weight: 700;
+			margin: 0 8px 0 0;
+			padding: 0;
 		}
 
-		.owners-testimonial-wrap .owl-theme .owl-dots .owl-dot.active span,
-		.owners-testimonial-wrap .owl-theme .owl-dots .owl-dot:hover span {
-			background: #667eea;
+		.owners-testimonial-wrap .owl-theme .owl-nav [class*='owl-'] span {
+			display: block;
+			line-height: 1;
+		}
+
+		.owners-testimonial-wrap .owl-theme .owl-nav [class*='owl-']:hover,
+		.owners-testimonial-wrap .owl-theme .owl-nav [class*='owl-']:focus {
+			background: #764ba2;
+			outline: none;
 		}
 
 		@media (max-width: 768px) {
@@ -845,8 +863,9 @@ Bengaluru Rural District</a>
 				$carousel.owlCarousel({
 					items: 1,
 					margin: 20,
-					nav: false,
-					dots: true,
+					nav: true,
+					navText: ['<', '>'],
+					dots: false,
 					loop: $carousel.children('.owners-testimonial-item').length > 1,
 					autoplay: true,
 					autoplayTimeout: 5000,
