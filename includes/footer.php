@@ -20,7 +20,7 @@ global $instagram_posts;
 									<a href="<?php echo SITE_URL; ?>"><img src="<?php echo LOGO_PATH; ?>" style="width:<?php echo LOGO_WIDTH; ?>;height:<?php echo LOGO_HEIGHT; ?>" alt="<?php echo SITE_NAME; ?>"></a>
 								</div>
 								<p><?php echo SITE_DESCRIPTION; ?></p>
-								<a class="footer-logo-btn text-center text-capitalize" href="<?php echo SITE_URL; ?>#it-up-contact">Get In Touch <i class="fas fa-arrow-right"></i></a>
+								<a class="footer-logo-btn text-center text-capitalize" href="association.php#it-up-contact">Get In Touch <i class="fas fa-arrow-right"></i></a>
 							</div>
 						</div>
 					</div>
@@ -105,3 +105,4 @@ global $instagram_posts;
 	<script src="assets/js/it-source.js"></script>
 </body>
 </html>
+

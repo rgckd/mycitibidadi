@@ -10,7 +10,7 @@ async function clickSubmit(page) {
 
 test.describe('Contact Form Submission Tests', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/association.php');
     // Scroll to the contact form
     await page.locator('text=Get in touch with us!').scrollIntoViewIfNeeded();
   });

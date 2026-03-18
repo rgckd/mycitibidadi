@@ -239,7 +239,7 @@
 							<li><a class="nav-link" href="owners.html">Owners</a></li>
 							<li><a class="nav-link" href="association.php">Association</a></li>
 								<li><a class="nav-link" href="https://mycitibidadi.com/gallery.php">Gallery</a></li>
-							<li><a class="nav-link" href="index.html#it-up-contact">Contact Us</a></li>
+							<li><a class="nav-link" href="association.php#it-up-contact">Contact Us</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -263,7 +263,7 @@
 									<li><a class="nav-link" href="owners.html">Owners</a></li>
 									<li><a class="nav-link" href="association.php">Association</a></li>
 								<li><a class="nav-link" href="https://mycitibidadi.com/gallery.php">Gallery</a></li>
-									<li><a class="nav-link" href="index.html#it-up-contact">Contact Us</a></li>
+									<li><a class="nav-link" href="association.php#it-up-contact">Contact Us</a></li>
 									<li><a class="nav-link active" href="news.php">News Updates</a></li>
 								</ul>
 							</nav>
@@ -434,4 +434,5 @@
 <!-- End of news section ============================================= -->
 
 <?php include 'includes/footer.php'; ?>
+
 

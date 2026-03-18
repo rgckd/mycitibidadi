@@ -84,7 +84,7 @@ include 'includes/header.php';
 					</div>
 				</div>
 				<div class="it-up-ft-btn text-center" style="display: flex; justify-content: center; align-items: center;">
-					<a class="nav-link" href="<?php echo SITE_URL; ?>#it-up-contact">
+					<a class="nav-link" href="association.php#it-up-contact">
 						Contact Us <i class="fas fa-arrow-right"></i>
 					</a>
 				</div>
@@ -206,3 +206,4 @@ include 'includes/header.php';
 	============================================= -->
 
 <?php include 'includes/footer.php'; ?>
+

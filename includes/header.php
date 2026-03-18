@@ -69,9 +69,9 @@ $current_page = isset($current_page) ? $current_page : 'home';
 							<li><a class="nav-link" href="gallery.php">Gallery</a></li>
 							
 							<?php if ($current_page === 'home'): ?>
-								<li><a class="nav-link" href="#it-up-contact">Contact Us</a></li>
+								<li><a class="nav-link" href="association.php#it-up-contact">Contact Us</a></li>
 							<?php else: ?>
-								<li><a class="nav-link" href="<?php echo SITE_URL; ?>#it-up-contact">Contact Us</a></li>
+								<li><a class="nav-link" href="association.php#it-up-contact">Contact Us</a></li>
 							<?php endif; ?>
 						</ul>
 					</nav>
@@ -99,7 +99,7 @@ $current_page = isset($current_page) ? $current_page : 'home';
 									<li><a class="nav-link" href="<?php echo SITE_URL; ?>owners">Owners</a></li>
 									<li><a class="nav-link" href="association.php">Association</a></li>
 									<li><a class="nav-link" href="gallery.php">Gallery</a></li>
-									<li><a class="nav-link" href="<?php echo SITE_URL; ?>#it-up-contact">Contact Us</a></li>
+									<li><a class="nav-link" href="association.php#it-up-contact">Contact Us</a></li>
 									<li><a class="nav-link" href="<?php echo UPDATES_URL; ?>" target="_blank">Updates</a></li>
 								</ul>
 							</nav>
@@ -111,3 +111,4 @@ $current_page = isset($current_page) ? $current_page : 'home';
 	</header>
 <!-- End of header section
 	============================================= -->
+
