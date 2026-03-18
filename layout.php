@@ -189,6 +189,10 @@ include 'includes/header.php';
 	============================================= -->
 	<section id="it-up-layout-visit" class="it-up-announcements-section">
 		<div class="container">
+			<div class="it-up-section-title headline-1 text-center">
+				<span>_Visiting Layout_</span>
+				<h2></h2>
+			</div>
 			<div class="it-up-site-visit-wrap">
 				<h3>Planning to visit the layout?</h3>
 				<p>We are happy that you are visiting our layout. Please note, we allow only Owners to enter the layout. Agents need authorization from Owners to be allowed inside.</p>
