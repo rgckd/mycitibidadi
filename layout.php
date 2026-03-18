@@ -185,4 +185,24 @@ include 'includes/header.php';
 <!-- End of service section
 	============================================= -->
 
+<!-- Start of layout visit section
+	============================================= -->
+	<section id="it-up-layout-visit" class="it-up-announcements-section">
+		<div class="container">
+			<div class="it-up-site-visit-wrap">
+				<h3>Planning your site visit</h3>
+				<p>We are happy that you are visiting our layout. Please refer to the maps below to help with your visit. We have taken precautions under the light of recent untoward incidents in ours and neighbouring layouts. Please see the <a href="assets/documents/MyCiti GATE Announcements.pdf" target="_blank" rel="noopener noreferrer"><b><u>attached guidelines</u></b></a> before visiting the site. For assistance, contact Chandre Gowda (Manager) at +91.99007.42192.</p>
+			</div>
+
+			<div style="margin-top: 22px;">
+				<img src="assets/img/myciti_layout_cameras.jpeg" alt="MyCiti Layout with Video Cameras" style="width: 100%; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.15);">
+				<div style="margin-top: 20px;">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.9472896707!2d77.3725908!3d12.7752798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae4fdc14ac90b1%3A0x445d6f08d704d1a8!2sMyCiti%20owners%20association!5e0!3m2!1sen!2sin!4v1708287600000!5m2!1sen!2sin" width="100%" height="350" style="border:0; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.15);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- End of layout visit section
+	============================================= -->
+
 <?php include 'includes/footer.php'; ?>
