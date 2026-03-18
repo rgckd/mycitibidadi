@@ -226,6 +226,15 @@
 			outline: none;
 		}
 
+		.office-assistant-extra {
+			display: none;
+			margin-top: 12px;
+		}
+
+		.office-assistant-toggle {
+			cursor: pointer;
+		}
+
 		@media (max-width: 768px) {
 			.owners-testimonial-card {
 				padding: 18px;
@@ -258,12 +267,12 @@
 
 		/* Extra top spacing for Owners page first section under sticky header */
 		.owners-top-gap {
-			margin-top: 138px;
+			margin-top: 154px;
 		}
 
 		@media (max-width: 991px) {
 			.owners-top-gap {
-				margin-top: 108px;
+				margin-top: 120px;
 			}
 		}
 	</style>
@@ -383,8 +392,8 @@ https://x.com/myciti_bidadi" target="_blank"><i class="fab fa-twitter"></i></a>
 				<div class="it-up-announcement-item">
 					<div class="it-up-announcement-meta">Mandatory Circular</div>
 					<h3>No Objection Certificate (NOC) for Site Transactions</h3>
-					<p>All site sale and purchase transactions must obtain an NOC from the Association before completion of transfer.</p>
-					<a href="#owners-corner">Read owners guidance <i class="fas fa-arrow-right"></i></a>
+					<p>ANY PROPERTY TRANSACTIONS, BUYING OR SELLING, MUST GET A NO OBJECTION CERTIFICATE (NOC) FROM THE ASSOCIATION. FAILURE TO DO SO, THE LIABILITY WILL BE TRANSFERRED TO THE NEW BUYER AND THE SAME SHOULD BE PAID TO THE ASSOCIATION.</p>
+					<a href="association.php#it-up-contact">Get in Touch <i class="fas fa-arrow-right"></i></a>
 				</div>
 				<div class="it-up-announcement-item">
 					<div class="it-up-announcement-meta">Need Help?</div>
@@ -392,43 +401,22 @@ https://x.com/myciti_bidadi" target="_blank"><i class="fab fa-twitter"></i></a>
 					<p>For membership, documents, dues clarification, or owner support, reach out to the committee through the contact section.</p>
 					<a href="association.php#it-up-contact">Contact committee <i class="fas fa-arrow-right"></i></a>
 				</div>
+				<div class="it-up-announcement-item">
+					<div class="it-up-announcement-meta">Member Notice</div>
+					<h3>Office Assistant Appointment</h3>
+					<p>MCOA has appointed Ms. Priyanka as Office Assistant (part time) to support association activities and owner outreach, including communication about the Special General Body Meeting on 5th April 2026 at 10 AM in MyCiti Layout.</p>
+					<div class="office-assistant-extra">
+						<p>MCOA has appointed an Office Assistant by name Ms. Priyanka. She is a student working towards BCA degree, will be working part time for the Association. Her role will be to support the Association in its activities.</p>
+						<p>To start with, she has been assigned the task of making calls to Owner Members and Owner Non-Members to introduce herself and make them aware of the Special General Body Meeting (SGBM) on 5th April 2026 at 10 AM in MyCiti Layout. She will also touch up on collecting Membership status of individuals and update our records.</p>
+						<p>The Office Bearers request all owners to extend their co-operation in making her adjust well to the challenging role she has undertaken.</p>
+						<p>Regards<br>MCOA</p>
+					</div>
+					<a href="#" class="office-assistant-toggle" aria-expanded="false">More <i class="fas fa-arrow-right"></i></a>
+				</div>
 			</div>
 		</div>
 	</section>
 <!-- End of announcements section
-	============================================= -->
-
-<!-- Start of banner section
-	============================================= -->
-	<section id="it-up-banner" class="it-up-banner-section position-relative">
-		<span class="it-up-banner-deco1 position-absolute"> <img src="assets/img/its/b-vector1.png" alt=""></span>
-		<span class="it-up-banner-deco2 position-absolute"> <img src="assets/img/its/b-shape1.png" alt=""></span>
-		<span class="it-up-banner-deco3 position-absolute"> <img src="assets/img/its/b-shape2.png" alt=""></span>
-		<span class="it-up-banner-deco4 position-absolute"> <img src="assets/img/its/b-shape3.png" alt=""></span>
-		<div class="container">
-			<div class="it-up-banner-content">
-				<div class="it-up-banner-text headline-1 pera-content">
-
-					<span>Attention Owners</span>
-					<h1>Important Announcements <br>to Owners</h1>
-					
-					<h3 style="margin-top: 20px; margin-bottom: 10px; color: #d9534f; font-weight: bold;">Maintenance Payment for 2026-27 is due by 30th April, 2026</h3>
-					<p><a href="#owners-corner"><b><u>See below for details.</u></b></a></p>
-					<h3 style="margin-top: 20px; margin-bottom: 10px; color: #d9534f; font-weight: bold;">No Objection Certificate (NOC) - Mandatory for Sale or Purchase of Sites</h3>
-					<p>ANY PROPERTY TRANSACTIONS, BUYING OR SELLING, MUST GET A <b> NO OBJECTION CERTIFICATE (NOC)</b>  FROM THE ASSOCIATION. <b> FAILURE TO DO SO, THE LIABILITY WILL BE TRANSFERRED TO THE NEW BUYER</b>  AND THE SAME SHOULD BE PAID TO THE ASSOCIATION</p>
-					<div class="it-up-banner-btn" style="margin-top: 20px; margin-bottom: 30px;">
-						<div class="it-up-banner-cta-btn text-center">
-							<a class="nav-link" href="association.php#it-up-contact">Get in Touch <i class="fas fa-arrow-right"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="it-up-banner-img">
-					<img src="assets/img/logo/pic1.jpeg" alt="Owners information">
-				</div>
-			</div>
-		</div>
-	</section>
-<!-- End of banner section
 	============================================= -->
 
 <!-- Start of sponsor section
@@ -856,6 +844,26 @@ Bengaluru Rural District</a>
 	<script src="assets/js/waypoints.min.js"></script>
 	<script src="assets/js/typer-new.js"></script>
 	<script src="assets/js/it-source.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			document.querySelectorAll('.office-assistant-toggle').forEach(function (toggle) {
+				toggle.addEventListener('click', function (event) {
+					event.preventDefault();
+					var card = toggle.closest('.it-up-announcement-item');
+					if (!card) return;
+					var extra = card.querySelector('.office-assistant-extra');
+					if (!extra) return;
+
+					var isExpanded = extra.style.display === 'block';
+					extra.style.display = isExpanded ? 'none' : 'block';
+					toggle.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
+					toggle.innerHTML = isExpanded
+						? 'More <i class="fas fa-arrow-right"></i>'
+						: 'Less <i class="fas fa-arrow-up"></i>';
+				});
+			});
+		});
+	</script>
 </body>
 </html>		
 
