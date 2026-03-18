@@ -190,8 +190,9 @@ include 'includes/header.php';
 	<section id="it-up-layout-visit" class="it-up-announcements-section">
 		<div class="container">
 			<div class="it-up-site-visit-wrap">
-				<h3>Planning your site visit</h3>
-				<p>We are happy that you are visiting our layout. Please refer to the maps below to help with your visit. We have taken precautions under the light of recent untoward incidents in ours and neighbouring layouts. Please see the <a href="assets/documents/MyCiti GATE Announcements.pdf" target="_blank" rel="noopener noreferrer"><b><u>attached guidelines</u></b></a> before visiting the site. For assistance, contact Chandre Gowda (Manager) at +91.99007.42192.</p>
+				<h3>Planning to visit the layout?</h3>
+				<p>We are happy that you are visiting our layout. Please note, we allow only Owners to enter the layout. Agents need authorization from Owners to be allowed inside.</p>
+				<p>Please refer to the maps below to help with your visit. We have taken precautions under the light of recent untoward incidents in ours and neighbouring layouts. Please see the <a href="assets/documents/MyCiti GATE Announcements.pdf" target="_blank" rel="noopener noreferrer"><b><u>attached guidelines</u></b></a> before visiting the site. For assistance, contact Chandre Gowda (Manager) at +91.99007.42192.</p>
 			</div>
 
 			<div style="margin-top: 22px;">
