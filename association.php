@@ -46,7 +46,7 @@ include 'includes/header.php';
 							</div>
 							<div class="it-up-about-btn">
 								<span>Want to get in touch with us?</span>
-								<a class="nav-link" href="https://mycitibidadi.com/#it-up-contact">Write to us <i class="fas fa-arrow-right"></i></a>
+								<a class="nav-link" href="#it-up-contact">Write to us <i class="fas fa-arrow-right"></i></a>
 							</div>
 						</div>
 					</div>
@@ -233,6 +233,107 @@ include 'includes/header.php';
 		</div>
 	</section>
 <!-- End of testimonial section
+	============================================= -->
+
+<!-- Start of contact section
+	============================================= -->
+	<section id="it-up-contact" class="it-up-contact-section position-relative">
+		<span class="it-up-service-shape position-absolute deco1"><img src="assets/img/its/s-shape1.png" alt=""></span>
+		<span class="it-up-service-shape position-absolute deco2"><img src="assets/img/its/s-shape2.png" alt=""></span>
+		<span class="it-up-service-shape position-absolute deco3"><img src="assets/img/its/s-shape3.png" alt=""></span>
+		<span class="it-up-service-shape position-absolute deco4"><img src="assets/img/its/s-shape4.png" alt=""></span>
+		<span class="it-up-service-shape position-absolute deco5"><img src="assets/img/its/s-shape5.png" alt=""></span>
+		<div class="container">
+			<div class="it-up-section-title-2 headline-1 text-center">
+				<span>_Connect with us_</span>
+				<h2>Get in touch with us! </h2>
+				<h5>Please mention the site number(s) and phase in your message if you are an owner. </h5>
+			</div>
+			<div class="it-up-contact-content">
+				<div class="row">
+					<div class="col-lg-5">
+						<div class="it-up-contact-img position-relative">
+							<img src="assets/img/myciti_carousel_5.jpg" alt="">
+							<span class="contact-shape position-absolute" data-parallax='{"y" : -50}'><img src="assets/img/its/cn-sh1.png" alt=""></span>
+							<div class="it-up-contact-text text-center headline-1">
+								<img src="assets/img/its/marker.png" alt="">
+								<h4>Core Committee</h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-7">
+						<div class="it-up-form-wrap">
+							<form action="contact.php" method="POST" id="contactForm">
+								<!-- CSRF token will be added via JavaScript -->
+								<input type="hidden" name="csrf_token" value="">
+								
+								<div class="it-up-form-input">
+									<div class="row">
+										<div class="col-md-6">
+											<label>Full name*</label>
+											<input type="text" name="name" placeholder="John Doe" required>
+										</div>
+										<div class="col-md-6">
+											<label>Mail address*</label>
+											<input type="email" name="email" placeholder="email@example.com" required>
+										</div>
+									</div>
+								</div>
+								<div class="it-up-form-input">
+									<div class="row">
+										<div class="col-md-12">
+											<label>Phone Number*</label>
+											<input type="tel" name="phone" placeholder="+91 9900742192" required>
+										</div>
+									</div>
+								</div>
+								<div class="it-up-form-select position-relative">
+									<label>Are you a site owner at MyCiti Layout?*</label>
+									<select name="is_owner" id="isOwnerSelect" required onchange="toggleOwnerFields()">
+										<option value="">-- Please select --</option>
+										<option value="Yes">Yes</option>
+										<option value="No">No</option>
+									</select>
+								</div>
+								<div id="ownerFields" style="display: none;">
+									<div class="it-up-form-input">
+										<div class="row">
+											<div class="col-md-6">
+												<label>Plot Number(s)*</label>
+												<input type="text" name="plot_numbers" id="plotNumbers" placeholder="e.g., 123, 456">
+											</div>
+											<div class="col-md-6">
+												<label>Phase(s)*</label>
+												<input type="text" name="phases" id="phases" placeholder="e.g., Phase 1, Phase 2">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="it-up-form-select position-relative">
+									<label>Select Services*</label>
+									<select name="subject" required>
+										<option value="">-- Select a service --</option>
+										<option value="Sell my site">Sell my site</option>
+										<option value="Purchase a site">Purchase a site</option>
+										<option value="Member Registration">Member Registration</option>
+										<option value="eKhata">eKhata</option>
+										<option value="No Objection Certificate (NOC)">No Objection Certificate (NOC)</option>
+										<option value="Other">Other</option>
+									</select>
+								</div>
+								<div class="it-up-form-input">
+									<label>Type your message*</label>
+									<textarea name="message" placeholder="Message..." required></textarea>
+								</div>
+								<button type="submit">Send your message <i class="fas fa-arrow-right"></i></button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- End of contact section
 	============================================= -->
 
 <?php include 'includes/footer.php'; ?>
