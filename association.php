@@ -3,63 +3,9 @@ $current_page = 'association';
 include 'includes/header.php';
 ?>
 
-<!-- Start of about section
-	============================================= -->
-	<section id="it-up-about" class="it-up-about-section inner-page-top-gap">
-		<div class="container">
-			<div class="it-up-about-content">
-				<div class="row">
-					<div class="col-lg-5">
-						<div class="it-up-about-img position-relative">
-							<span></span>
-							<div class="it-up-about-img-wrap text-right">
-							    <img src="assets/img/myciti_carousel_4.jpeg" alt="">
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-7">
-						<div class="it-up-about-text">
-							<div class="it-up-section-title headline-1">
-								<span>_About The Association_</span>
-								<h2>The MyCiti Owners Association (MCOA)</h2>
-								<p>The MyCiti Owners Association was formed in 2012. Owners and prior committee members came together at the MyCiti Layout in November 2024 and elected 7 core committee members, and 10 extended committee members to continue development of our layout, find and enroll owners to the Association.</p>
-							</div>
-							<div class="it-up-about-feature clearfix">
-								<div class="it-up-about-ft-item">
-									<div class="it-up-about-ft-icon text-center float-left">
-										<img src="assets/img/its/icon/ab-ft1.png" alt="">
-									</div>
-									<div class="it-up-about-ft-text headline-1 pera-content">
-										<h3><a href="owners.html" target="_blank">Owners Corner</a></h3>
-										<p>Property Transactions, New Owner Registration, NOC, Taxes</p><a href="owners.html"><b> Read More</b></a>
-									</div>
-								</div>
-								<div class="it-up-about-ft-item">
-									<div class="it-up-about-ft-icon text-center float-left">
-										<img src="assets/img/its/icon/ab-ft2.png" alt="">
-									</div>
-									<div class="it-up-about-ft-text headline-1 pera-content">
-										<h3><a href="#">Documents Help</a></h3>
-										<p>Get in touch with us if you need help with documents.</p>
-									</div>
-								</div>
-							</div>
-							<div class="it-up-about-btn">
-								<span>Want to get in touch with us?</span>
-								<a class="nav-link" href="#it-up-contact">Write to us <i class="fas fa-arrow-right"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-<!-- End of about section
-	============================================= -->
-
 <!-- Start of achivement section
 	============================================= -->
-	<section id="it-up-achivement" class="it-up-achivement-section position-relative">
+	<section id="it-up-achivement" class="it-up-achivement-section position-relative inner-page-top-gap">
 		<span class="it-up-achive-shape1 position-absolute"><img src="assets/img/its/achive-bg.png" alt=""></span>
 		<span class="it-up-achive-shape2 position-absolute"><img src="assets/img/its/achive-bg2.png" alt=""></span>
 		<div class="container">
@@ -122,6 +68,60 @@ include 'includes/header.php';
 		</div>
 	</section>
 <!-- End of achivement section
+	============================================= -->
+
+<!-- Start of about section
+	============================================= -->
+	<section id="it-up-about" class="it-up-about-section">
+		<div class="container">
+			<div class="it-up-about-content">
+				<div class="row">
+					<div class="col-lg-5">
+						<div class="it-up-about-img position-relative">
+							<span></span>
+							<div class="it-up-about-img-wrap text-right">
+							    <img src="assets/img/myciti_carousel_4.jpeg" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-7">
+						<div class="it-up-about-text">
+							<div class="it-up-section-title headline-1">
+								<span>_About The Association_</span>
+								<h2>The MyCiti Owners Association (MCOA)</h2>
+								<p>The MyCiti Owners Association was formed in 2012. Owners and prior committee members came together at the MyCiti Layout in November 2024 and elected 7 core committee members, and 10 extended committee members to continue development of our layout, find and enroll owners to the Association.</p>
+							</div>
+							<div class="it-up-about-feature clearfix">
+								<div class="it-up-about-ft-item">
+									<div class="it-up-about-ft-icon text-center float-left">
+										<img src="assets/img/its/icon/ab-ft1.png" alt="">
+									</div>
+									<div class="it-up-about-ft-text headline-1 pera-content">
+										<h3><a href="owners.html" target="_blank">Owners Corner</a></h3>
+										<p>Property Transactions, New Owner Registration, NOC, Taxes</p><a href="owners.html"><b> Read More</b></a>
+									</div>
+								</div>
+								<div class="it-up-about-ft-item">
+									<div class="it-up-about-ft-icon text-center float-left">
+										<img src="assets/img/its/icon/ab-ft2.png" alt="">
+									</div>
+									<div class="it-up-about-ft-text headline-1 pera-content">
+										<h3><a href="#">Documents Help</a></h3>
+										<p>Get in touch with us if you need help with documents.</p>
+									</div>
+								</div>
+							</div>
+							<div class="it-up-about-btn">
+								<span>Want to get in touch with us?</span>
+								<a class="nav-link" href="#it-up-contact">Write to us <i class="fas fa-arrow-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- End of about section
 	============================================= -->
 
 <!-- Start of testimonial section
