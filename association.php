@@ -5,7 +5,7 @@ include 'includes/header.php';
 
 <!-- Start of about section
 	============================================= -->
-	<section id="it-up-about" class="it-up-about-section">
+	<section id="it-up-about" class="it-up-about-section inner-page-top-gap">
 		<div class="container">
 			<div class="it-up-about-content">
 				<div class="row">

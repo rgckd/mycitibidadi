@@ -5,7 +5,7 @@ include 'includes/header.php';
 
 <!-- Start of Featured section
 	============================================= -->		
-	<section id="it-up-featured" class="it-up-featured-section position-relative">
+	<section id="it-up-featured" class="it-up-featured-section position-relative inner-page-top-gap">
 		<span class="it-up-ft-bg position-absolute"><img src="assets/img/its/ft-bg.png" alt=""></span>
 		<span class="it-up-ft-shape position-absolute"><img src="assets/img/its/ft-shape1.png" alt=""></span>
 		<span class="it-up-ft-shape2 position-absolute"><img src="assets/img/its/b-shape3.png" alt=""></span>

@@ -2330,4 +2330,15 @@ select:visited {
     top: -35px;
   }
 }
+
+/* Inner page hero offset to avoid sticky header overlap */
+.inner-page-top-gap {
+  margin-top: 56px;
+}
+
+@media (max-width: 991px) {
+  .inner-page-top-gap {
+    margin-top: 40px;
+  }
+}
 /*---------------------------------------------------- */
