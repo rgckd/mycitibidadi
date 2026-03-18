@@ -235,7 +235,7 @@
 					<nav class="it-up-main-navigation float-left ul-li">
 						<ul id="main-nav" class="navbar-nav text-capitalize clearfix">
 							<li><a class="nav-link" href="index.html">Home</a></li>
-							<li><a class="nav-link" href="index.html#it-up-service">About Us</a></li>
+							<li><a class="nav-link" href="layout.php">Layout</a></li>
 							<li><a class="nav-link" href="owners.html">Owners</a></li>
 							<li><a class="nav-link" href="association.php">Association</a></li>
 								<li><a class="nav-link" href="https://mycitibidadi.com/gallery.php">Gallery</a></li>
@@ -259,7 +259,7 @@
 							<nav class="main-navigation mobile_menu-dropdown clearfix ul-li">
 								<ul id="main-nav" class="navbar-nav text-capitalize clearfix">
 									<li><a class="nav-link" href="index.html">Home</a></li>
-									<li><a class="nav-link" href="index.html#it-up-service">About Us</a></li>
+									<li><a class="nav-link" href="layout.php">Layout</a></li>
 									<li><a class="nav-link" href="owners.html">Owners</a></li>
 									<li><a class="nav-link" href="association.php">Association</a></li>
 								<li><a class="nav-link" href="https://mycitibidadi.com/gallery.php">Gallery</a></li>
@@ -434,3 +434,4 @@
 <!-- End of news section ============================================= -->
 
 <?php include 'includes/footer.php'; ?>
+

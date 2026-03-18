@@ -9,7 +9,7 @@ test.describe('Navigation Tests', () => {
     // Check if initiatives.html exists and navigate
     const response = await page.goto('/initiatives.html', { waitUntil: 'domcontentloaded' });
     expect(response && response.ok()).toBeTruthy();
-    await expect(page.locator('body')).toContainText(/Initiatives|About Us|Owners/i);
+    await expect(page.locator('body')).toContainText(/Initiatives|Layout|Owners/i);
   });
 
   test('should navigate to owners page', async ({ page }) => {
