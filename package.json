@@ -10,7 +10,9 @@
     "test:ui": "playwright test --ui",
     "test:chrome": "playwright test --project=chromium",
     "test:firefox": "playwright test --project=firefox",
-    "test:safari": "playwright test --project=webkit"
+    "test:safari": "playwright test --project=webkit",
+    "test:php": "playwright test -c playwright.php.config.js --project=chromium",
+    "test:php:association": "playwright test tests/association-flow.spec.js -c playwright.php.config.js --project=chromium"
   },
   "keywords": ["testing", "playwright", "e2e"],
   "devDependencies": {

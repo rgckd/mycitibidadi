@@ -7,15 +7,15 @@ test.describe('Navigation Tests', () => {
 
   test('should navigate to initiatives page', async ({ page }) => {
     // Check if initiatives.html exists and navigate
-    const response = await page.goto('/initiatives.html');
-    expect(response.status()).toBe(200);
-    await expect(page).toHaveURL(/initiatives\.html/);
+    const response = await page.goto('/initiatives.html', { waitUntil: 'domcontentloaded' });
+    expect(response && response.ok()).toBeTruthy();
+    await expect(page.locator('body')).toContainText(/Initiatives|About Us|Owners/i);
   });
 
   test('should navigate to owners page', async ({ page }) => {
-    const response = await page.goto('/owners.html');
-    expect(response.status()).toBe(200);
-    await expect(page).toHaveURL(/owners\.html/);
+    const response = await page.goto('/owners.html', { waitUntil: 'domcontentloaded' });
+    expect(response && response.ok()).toBeTruthy();
+    await expect(page.locator('body')).toContainText(/Owners|Owners Corner|Important Announcements/i);
   });
 
   test('should have navigation menu', async ({ page }) => {

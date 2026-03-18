@@ -263,38 +263,90 @@ Last change:    00/00/00
 			},
 			ItUpBlogSlide: function (){
 				$(window).on('load',function(){
-					$('#it-up-sponsor-slide').owlCarousel({
-						margin:150,
-						responsiveClass:true,
-						nav: false,
-						dots: false,
-						loop:true,
-						responsive:{
-							0:{
-								items:1,
+					var sponsorSlider = $('#it-up-sponsor-slide');
+					if (sponsorSlider.length) {
+						sponsorSlider.owlCarousel({
+							margin:150,
+							responsiveClass:true,
+							nav: false,
+							dots: false,
+							loop:true,
+							responsive:{
+								0:{
+									items:1,
+								},
+								400:{
+									items:1,
+								},
+								600:{
+									items:3,
+								},
+								700:{
+									items:3,
+								},
+								1000:{
+									items:3,
+								},
+								1300:{
+									items:4,
+								},
+								1900:{
+									items:4,
+								},
 							},
-							400:{
-								items:1,
-							},
-							600:{
-								items:3,
-							},
-							700:{
-								items:3,
-							},
-							1000:{
-								items:3,
+						});
+					}
 
+					var announcementSlider = $('#it-up-announcement-slide');
+					if (announcementSlider.length) {
+						announcementSlider.owlCarousel({
+							margin: 20,
+							responsiveClass: true,
+							nav: false,
+							dots: true,
+							loop: true,
+							autoplay: true,
+							autoplayTimeout: 5500,
+							autoplayHoverPause: true,
+							smartSpeed: 700,
+							responsive:{
+								0:{
+									items:1,
+								},
+								768:{
+									items:1,
+								},
+								1200:{
+									items:1,
+								},
 							},
-							1300:{
-								items:4,
+						});
+					}
 
-							},
-							1900:{
-								items:4,
-							},
-						},
-					})
+					var ownersTestimonials = $('.owners-testimonial-carousel');
+					if (ownersTestimonials.length) {
+						ownersTestimonials.each(function () {
+							var carousel = $(this);
+							var items = carousel.children('.owners-testimonial-item');
+
+							if (items.length > 5) {
+								items.slice(5).remove();
+							}
+
+							carousel.owlCarousel({
+								items: 1,
+								margin: 20,
+								nav: true,
+								navText: ['<', '>'],
+								dots: false,
+								loop: carousel.children('.owners-testimonial-item').length > 1,
+								autoplay: true,
+								autoplayTimeout: 5000,
+								autoplayHoverPause: true,
+								smartSpeed: 700
+							});
+						});
+					}
 				});
 			},
 		}

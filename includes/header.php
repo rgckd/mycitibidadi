@@ -68,12 +68,7 @@ $current_page = isset($current_page) ? $current_page : 'home';
 							<?php endif; ?>
 							
 							<li><?php echo $current_page === 'owners' ? '<u><b>Owners</b></u>' : '<a class="nav-link" href="owners">Owners</a>'; ?></li>
-							
-							<?php if ($current_page === 'home'): ?>
-								<li><a class="nav-link" href="#it-up-testimonial">Association</a></li>
-							<?php else: ?>
-								<li><a class="nav-link" href="<?php echo SITE_URL; ?>#it-up-testimonial">Association</a></li>
-							<?php endif; ?>
+							<li><?php echo $current_page === 'association' ? '<u><b>Association</b></u>' : '<a class="nav-link" href="association.php">Association</a>'; ?></li>
 							
 							<li><a class="nav-link" href="gallery.php">Gallery</a></li>
 							
@@ -106,7 +101,7 @@ $current_page = isset($current_page) ? $current_page : 'home';
 									<li><a class="nav-link" href="<?php echo SITE_URL; ?>">Home</a></li>
 									<li><a class="nav-link" href="<?php echo SITE_URL; ?>#it-up-service">About Us</a></li>
 									<li><a class="nav-link" href="<?php echo SITE_URL; ?>owners">Owners</a></li>
-									<li><a class="nav-link" href="<?php echo SITE_URL; ?>#it-up-testimonial">Association</a></li>
+									<li><a class="nav-link" href="association.php">Association</a></li>
 									<li><a class="nav-link" href="gallery.php">Gallery</a></li>
 									<li><a class="nav-link" href="<?php echo SITE_URL; ?>#it-up-contact">Contact Us</a></li>
 									<li><a class="nav-link" href="<?php echo UPDATES_URL; ?>" target="_blank">Updates</a></li>

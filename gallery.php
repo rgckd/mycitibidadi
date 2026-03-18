@@ -291,7 +291,7 @@
 						<ul id="main-nav" class="navbar-nav text-capitalize clearfix">
 						<li><a class="nav-link" href="index.html#it-up-service">About Us</a></li>
 						<li><a class="nav-link" href="owners.html">Owners</a></li>
-						<li><a class="nav-link" href="index.html#it-up-testimonial">Association</a></li>
+						<li><a class="nav-link" href="association.php">Association</a></li>
 						<li><a class="nav-link active" href="https://mycitibidadi.com/gallery.php">Gallery</a></li>
 							<li><a class="nav-link" href="index.html#it-up-contact">Contact Us</a></li>
 						</ul>
@@ -318,7 +318,7 @@
 									<li><a class="nav-link" href="index.html">Home</a></li>
 									<li><a class="nav-link" href="index.html#it-up-service">About Us</a></li>
 									<li><a class="nav-link" href="owners.html">Owners</a></li>
-									<li><a class="nav-link" href="index.html#it-up-testimonial">Association</a></li>
+									<li><a class="nav-link" href="association.php">Association</a></li>
 									<li><a class="nav-link" href="https://mycitibidadi.com/gallery.php">Gallery</a></li>
 								<li><a class="nav-link" href="index.html#it-up-contact">Contact Us</a></li>
 								<li><a class="nav-link" href="news.php">News Updates</a></li>
