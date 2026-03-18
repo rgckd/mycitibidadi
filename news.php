@@ -286,7 +286,7 @@
 			<div class="news-grid">
 				<!-- News Item 0 - Deccan Herald Bidadi Township Update -->
 				<div class="news-card">
-					<img src="assets/img/bidadi_it_city.png" alt="Bidadi Township Land Acquisition Update" class="news-card-image">
+					<img src="assets/img/deccanherald_bidadi_2026.avif" alt="Bidadi Township Land Acquisition Update" class="news-card-image">
 					<div class="news-card-header">
 						<div class="news-date">
 							<i class="fas fa-calendar-alt"></i>
