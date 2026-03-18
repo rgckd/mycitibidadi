@@ -37,6 +37,16 @@ include 'includes/header.php';
 <!-- End of banner section
 	============================================= -->
 
+<!-- Start of NOC image section
+	============================================= -->
+	<section id="it-up-noc-image" class="it-up-noc-image-section">
+		<div class="container text-center" style="margin-top: 20px; margin-bottom: 10px;">
+			<img src="assets/img/myciti_noc.png" alt="MyCiti NOC" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.12);">
+		</div>
+	</section>
+<!-- End of NOC image section
+	============================================= -->
+
 <!-- Start of owners testimonials section
 	============================================= -->
 	<section id="it-up-owners-testimonials" class="it-up-announcements-section">
