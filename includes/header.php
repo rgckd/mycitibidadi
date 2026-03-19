@@ -61,9 +61,9 @@ $current_page = isset($current_page) ? $current_page : 'home';
 				<div class="it-up-main-menu-wrap clearfix">
 					<nav class="it-up-main-navigation float-left ul-li">
 						<ul id="main-nav" class="navbar-nav text-capitalize clearfix">
+							<li><?php echo $current_page === 'owners' ? '<u><b>Owners</b></u>' : '<a class="nav-link" href="owners">Owners</a>'; ?></li>
 							<li><?php echo $current_page === 'layout' ? '<u><b>Layout</b></u>' : '<a class="nav-link" href="layout.php">Layout</a>'; ?></li>
 							
-							<li><?php echo $current_page === 'owners' ? '<u><b>Owners</b></u>' : '<a class="nav-link" href="owners">Owners</a>'; ?></li>
 							<li><?php echo $current_page === 'association' ? '<u><b>Association</b></u>' : '<a class="nav-link" href="association.php">Association</a>'; ?></li>
 							
 							<li><a class="nav-link" href="gallery.php">Gallery</a></li>
