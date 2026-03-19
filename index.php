@@ -37,6 +37,21 @@ include 'includes/header.php';
 <!-- End of banner section
 	============================================= -->
 
+<!-- Start of social media CTA section
+	============================================= -->
+	<section id="it-up-social-cta" style="background: #f8f9fa; padding: 16px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee;">
+		<div class="container text-center">
+			<span style="font-size: 16px; font-weight: 600; color: #444; margin-right: 16px; vertical-align: middle;">Follow us on Social Media</span>
+			<a href="<?php echo SOCIAL_FACEBOOK; ?>" target="_blank" rel="noopener noreferrer" title="Facebook" style="color: #1877f2; font-size: 22px; margin: 0 8px; vertical-align: middle;"><i class="fab fa-facebook-f"></i></a>
+			<a href="<?php echo SOCIAL_TWITTER; ?>" target="_blank" rel="noopener noreferrer" title="X (Twitter)" style="color: #111; font-size: 22px; margin: 0 8px; vertical-align: middle;"><i class="fab fa-twitter"></i></a>
+			<a href="<?php echo SOCIAL_INSTAGRAM; ?>" target="_blank" rel="noopener noreferrer" title="Instagram" style="color: #e1306c; font-size: 22px; margin: 0 8px; vertical-align: middle;"><i class="fab fa-instagram"></i></a>
+			<a href="<?php echo SOCIAL_YOUTUBE; ?>" target="_blank" rel="noopener noreferrer" title="YouTube" style="color: #ff0000; font-size: 22px; margin: 0 8px; vertical-align: middle;"><i class="fab fa-youtube"></i></a>
+			<a href="<?php echo SOCIAL_THREADS; ?>" target="_blank" rel="noopener noreferrer" title="Threads" style="color: #111; font-size: 22px; margin: 0 8px; vertical-align: middle;"><i class="fab fa-threads"></i></a>
+		</div>
+	</section>
+<!-- End of social media CTA section
+	============================================= -->
+
 <!-- Start of NOC image section
 	============================================= -->
 	<section id="it-up-noc-image" class="it-up-noc-image-section">
