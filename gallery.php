@@ -228,6 +228,30 @@
 			}
 		}
 		
+		@media (prefers-color-scheme: dark) {
+			.gallery-container {
+				background: #131924;
+			}
+
+			.gallery-content-wrapper {
+				background: #1a2235;
+				box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+			}
+
+			.gallery-header h1 {
+				color: #e8e8e8;
+			}
+
+			.gallery-header p {
+				color: #a0a0a0;
+			}
+
+			.gallery-btn-container {
+				background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+				border-color: rgba(102, 126, 234, 0.2);
+			}
+		}
+
 		/* Fix header alignment */
 		.it-up-main-menu-wrap {
 			display: flex;
