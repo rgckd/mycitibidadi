@@ -2541,5 +2541,31 @@ select:visited {
     color: #e0e0e0;
   }
 
+  /* === Owners page: social CTA section === */
+  #it-up-social-cta-owners {
+    background: #131924 !important;
+    border-top-color: #2a3a4a !important;
+    border-bottom-color: #2a3a4a !important;
+  }
+
+  #it-up-social-cta-owners span {
+    color: #c8c8c8 !important;
+  }
+
+  #it-up-social-cta-owners a[title="X (Twitter)"],
+  #it-up-social-cta-owners a[title="Threads"] {
+    color: #e0e0e0 !important;
+  }
+
+  /* === Owners page: fee schedule section === */
+  #it-up-fee-schedule {
+    background: #131924 !important;
+  }
+
+  /* === Owners page: QR code image === */
+  .it-up-about-img-wrap img {
+    background: #1a2235 !important;
+  }
+
 }
 /*---------------------------------------------------- */
