@@ -25,19 +25,6 @@ Color Code
 ===========*/
 /*(1)- global area*/
 /*----------------------------------------------------*/
-:root {
-  color-scheme: light dark;
-  --myciti-page-bg: #ffffff;
-  --myciti-preloader-bg: #ffffff;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --myciti-page-bg: #0f141d;
-    --myciti-preloader-bg: #0f141d;
-  }
-}
-
 .s-it {
   margin: 0;
   padding: 0;
@@ -46,7 +33,6 @@ Color Code
   line-height: 1.625;
   color: #535353;
   font-family: "Roboto";
-  background-color: var(--myciti-page-bg);
   -moz-osx-font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
 }
@@ -91,7 +77,7 @@ div#preloader {
   width: 100%;
   height: 100%;
   overflow: visible;
-  background: var(--myciti-preloader-bg) url("../img/pre.svg") no-repeat center center;
+  background: #fff url("../img/pre.svg") no-repeat center center;
 }
 
 [data-background] {
@@ -2354,5 +2340,206 @@ select:visited {
   .inner-page-top-gap {
     margin-top: 40px;
   }
+}
+
+/*---------------------------------------------------- */
+/* Dark mode overrides                                  */
+/*----------------------------------------------------  */
+:root {
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  /* === Page background & body text === */
+  .s-it {
+    color: #c8c8c8;
+    background-color: #0f141d;
+  }
+
+  div#preloader {
+    background-color: #0f141d;
+  }
+
+  /* === Section titles === */
+  .it-up-section-title h2,
+  .it-up-section-title-2 h2 {
+    color: #e8e8e8;
+  }
+
+  /* === Sticky header & nav dropdown === */
+  .it-header-up-sticky {
+    background: #0f141d;
+  }
+
+  .it-up-main-navigation li a {
+    color: #e0e0e0;
+  }
+
+  .it-up-main-navigation .dropdown-menu {
+    background-color: #1a2235;
+  }
+
+  .it-up-main-navigation .dropdown-menu li {
+    border-bottom-color: rgba(255, 255, 255, 0.05);
+  }
+
+  /* === Banner === */
+  .it-up-banner-text h1 {
+    color: #e8e8e8;
+  }
+
+  /* === Announcements === */
+  .it-up-announcement-item {
+    background: linear-gradient(140deg, #1a2235 0%, #1a2a45 100%);
+    border-color: #1e3060;
+  }
+
+  .it-up-announcement-item h3 {
+    color: #e8e8e8;
+  }
+
+  .it-up-announcement-item p {
+    color: #9999a5;
+  }
+
+  /* === Owners testimonial cards === */
+  .owners-testimonial-card {
+    background: #1a2235;
+  }
+
+  .owners-testimonial-card p {
+    color: #d0d0d0;
+  }
+
+  /* === Site visit wrap === */
+  .it-up-site-visit-wrap {
+    background: linear-gradient(180deg, #2a1a18 0%, #1a2235 100%);
+    border-color: #5a3030;
+  }
+
+  .it-up-site-visit-wrap p {
+    color: #b0b0b0;
+  }
+
+  /* === About section === */
+  .it-up-about-circle-progress {
+    background-color: #1a2235;
+  }
+
+  .it-up-about-circle-progress .progress_area strong {
+    color: #e8e8e8;
+  }
+
+  .it-up-about-ft-item .it-up-about-ft-text h3 {
+    color: #e8e8e8;
+  }
+
+  .it-up-about-btn span {
+    color: #e8e8e8;
+  }
+
+  /* === Featured section === */
+  .it-up-featured-section {
+    background-color: #131924;
+  }
+
+  .it-up-featured-innerbox {
+    background-color: #1a2235;
+  }
+
+  .it-up-featured-innerbox .it-up-featured-text h3 {
+    color: #e8e8e8;
+  }
+
+  /* === Service tabs === */
+  .it-up-service-tab-btn {
+    background-color: #1a2235;
+  }
+
+  .it-up-service-tab-btn .nav-tabs .nav-link {
+    color: #555566;
+  }
+
+  .it-up-service-tab-btn .nav-tabs .nav-link.active {
+    color: #e0e0e0;
+  }
+
+  .it-up-service-tab-btn .nav-tabs .nav-link.active:before {
+    background-color: #1a2235;
+  }
+
+  .it-up-service-tab-wrap {
+    background-color: #131924;
+  }
+
+  .it-up-service-tab-text h3 {
+    color: #e8e8e8;
+  }
+
+  /* === Achievement section === */
+  .it-up-achivement-section {
+    background-color: #131924;
+  }
+
+  .it-up-achivement-innerbox .it-up-achivement-text h3,
+  .it-up-achivement-innerbox .it-up-achivement-text strong,
+  .it-up-achivement-innerbox .it-up-achivement-text p {
+    color: #e8e8e8;
+  }
+
+  /* === Testimonial cards === */
+  .it-up-testimonial-innerbox {
+    background-color: #1a2235;
+    border-color: #2a3a4a;
+  }
+
+  .it-up-testimonial-innerbox .it-up-testi-author h4 {
+    color: #e8e8e8;
+  }
+
+  .it-up-testimonial-innerbox .it-up-testi-author span {
+    color: #9a9a9a;
+  }
+
+  /* === Contact section === */
+  .it-up-contact-section {
+    background-color: #131924;
+  }
+
+  .it-up-contact-content {
+    background-color: #1a2235;
+  }
+
+  .it-up-form-input label,
+  .it-up-form-select label {
+    color: #e0e0e0;
+  }
+
+  .it-up-form-input input,
+  .it-up-form-input select,
+  .it-up-form-input textarea,
+  .it-up-form-select input,
+  .it-up-form-select select,
+  .it-up-form-select textarea {
+    background-color: #131924;
+    border-color: #2a3a4a;
+    color: #c8c8c8;
+  }
+
+  /* === Blog cards === */
+  .it-up-blog-innerbox .it-up-blog-text h3 {
+    color: #e8e8e8;
+    border-bottom-color: #2a3a4a;
+  }
+
+  .it-up-blog-innerbox .it-up-blog-text p {
+    color: #a0a0a0;
+  }
+
+  .it-up-blog-innerbox .it-up-blog-text .it-up-blog-bottom .it-up-blog-author .it-up-blog-ath-text a {
+    color: #e0e0e0;
+  }
+
 }
 /*---------------------------------------------------- */
