@@ -26,7 +26,7 @@ include 'includes/header.php';
 					</div>
 				</div>
 				<div class="it-up-banner-img">
-					<img src="assets/img/logo/pic1.jpeg" alt="">
+					<img src="assets/img/logo/myciti-gate-hero.jpeg" alt="MyCiti gate entrance">
 					<span class="it-up-img-deco1 position-absolute" data-parallax='{"x" : -70}'> <img src="assets/img/its/slack.png" alt=""></span>
 					<span class="it-up-img-deco2 position-absolute" data-parallax='{"y" : -70}'> <img src="assets/img/its/dimond.png" alt=""></span>
 					<span class="it-up-img-deco3 position-absolute" data-parallax='{"y" : 70}'> <img src="assets/img/its/en.png" alt=""></span>
