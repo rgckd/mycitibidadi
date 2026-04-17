@@ -195,8 +195,13 @@ include 'includes/header.php';
 			</div>
 			<div class="it-up-site-visit-wrap">
 				<h3>Planning to visit the layout?</h3>
-				<p>We are happy that you are visiting our layout. Please note, we allow only Owners to enter the layout. Agents need authorization from Owners to be allowed inside.</p>
-				<p>Please refer to the maps below to help with your visit. We have taken precautions under the light of recent untoward incidents in ours and neighbouring layouts. Please see the <a href="assets/documents/MyCiti GATE Announcements.pdf" target="_blank" rel="noopener noreferrer"><b><u>attached guidelines</u></b></a> before visiting the site. For assistance, contact Chandre Gowda (Manager) at +91.99007.42192.</p>
+				<p>We are happy that you are visiting our layout. Please note the following entry requirements before your visit:</p>
+				<ul>
+					<li><b>Member Owners:</b> Please present your <b>MyCiti Membership Card</b> (e-Card sent to your mobile) at the gate and fill up the Visitor Entry Form.</li>
+					<li><b>Non-Member Owners:</b> Please produce a copy of your <b>Sale Deed along with Photo ID</b> at the gate. Note that non-member vehicles are <b>not allowed</b> inside the gate.</li>
+					<li><b>Representatives:</b> The owner must send an Authorization Letter or WhatsApp message to Mr. Chandregowda in advance, mentioning the owner's name, MC No., and the representative's name. The representative then follows the standard Entry Procedure.</li>
+				</ul>
+				<p>We have taken precautions under the light of recent untoward incidents in ours and neighbouring layouts. Please see the <a href="assets/documents/MyCiti GATE Announcements.pdf" target="_blank" rel="noopener noreferrer"><b><u>attached guidelines</u></b></a> for the full Entry Procedure. For assistance, contact Chandre Gowda (Manager) at +91.99007.42192.</p>
 			</div>
 
 			<div style="margin-top: 22px;">
