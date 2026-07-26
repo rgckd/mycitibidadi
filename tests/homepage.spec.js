@@ -17,7 +17,7 @@ test.describe('Homepage Tests', () => {
 
   test('should display contact information in header', async ({ page }) => {
     const headerCta = page.locator('.it-header-top-cta').first();
-    await expect(page.locator('a[href="mailto:mycitiownersassociation@gmail.com"]').first()).toBeVisible();
+    await expect(page.locator('a[href="mailto:mycitilayout@gmail.com"]').first()).toBeVisible();
     await expect(headerCta.getByText('+91 9900742192')).toBeVisible();
     await expect(headerCta.getByText('MyCiti Layout, Bidadi, Bengaluru')).toBeVisible();
   });

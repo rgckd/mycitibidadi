@@ -9,12 +9,12 @@ require 'updates/phpmailerw/PHPMailerAutoload.php';
 
 // Configuration
 define("RECIPIENT_NAME", "MyCiti Owners Association");
-define("RECIPIENT_EMAIL", "mycitiownersassociation@gmail.com");
+define("RECIPIENT_EMAIL", "mycitilayout@gmail.com");
 
 // SMTP Configuration - UPDATE THESE WITH YOUR CREDENTIALS
 define("SMTP_HOST", "smtp.gmail.com");  // Gmail SMTP server
 define("SMTP_PORT", 587);                // TLS port
-define("SMTP_USERNAME", "mycitiownersassociation@gmail.com"); // Your Gmail address
+define("SMTP_USERNAME", "mycitilayout@gmail.com"); // Your Gmail address
 define("SMTP_PASSWORD", "YOUR_APP_PASSWORD_HERE");  // ⚠️ REPLACE WITH YOUR GMAIL APP PASSWORD
 define("SMTP_SECURE", "tls");            // tls or ssl
 define("FROM_EMAIL", "contact@mycitibidadi.com");

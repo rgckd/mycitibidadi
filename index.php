@@ -267,7 +267,7 @@ Bengaluru Rural District</a>
 										<i class="fas fa-phone"></i><a href="#">+91 9900742192, Chandre Gowda</a>
 									</li>
 									<li>
-										<i class="fas fa-envelope"></i><a href="mailto:mycitiownersassociation@gmail.com">mycitiownersassociation@gmail.com</a>
+										<i class="fas fa-envelope"></i><a href="mailto:mycitilayout@gmail.com">mycitilayout@gmail.com</a>
 									</li>
 								</ul>
 								<div class="office-open-hour">
@@ -402,7 +402,7 @@ Bengaluru Rural District</a>
 						errorMessage = 'Too many submission attempts. Please wait 5 minutes before trying again.';
 						break;
 					case 'smtp':
-						errorMessage = 'Email service is temporarily unavailable. Please try again later or contact us at mycitiownersassociation@gmail.com';
+						errorMessage = 'Email service is temporarily unavailable. Please try again later or contact us at mycitilayout@gmail.com';
 						break;
 				}
 				

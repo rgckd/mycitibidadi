@@ -292,7 +292,7 @@
 		<div class="it-header-up-top clearfix"> 
 			<div class="container">
 				<div class="it-header-top-cta float-left">
-					<a href="#"><i class="fas fa-envelope"></i> mycitiownersassociation@gmail.com</a>
+					<a href="#"><i class="fas fa-envelope"></i> mycitilayout@gmail.com</a>
 					<a href="#"><i class="fas fa-phone"></i> +91 9900742192 </a>
 					<a href="https://maps.app.goo.gl/tZtpYUEQc9pqepqR9" target="_blank" rel="noopener noreferrer">  <i class="fas fa-map-marker-alt"></i> MyCiti Layout, Bidadi, Bengaluru </a>
 				</div>

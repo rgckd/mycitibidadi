@@ -11,7 +11,7 @@ setSecurityHeaders();
 
 // Define constants
 define("RECIPIENT_NAME", "MyCiti Owners Association");
-define("RECIPIENT_EMAIL", "mycitiownersassociation@gmail.com");
+define("RECIPIENT_EMAIL", "mycitilayout@gmail.com");
 
 // Validate CSRF token
 if (!isset($_POST['csrf_token']) || !validateCSRFToken($_POST['csrf_token'])) {

@@ -29,7 +29,7 @@ To send emails through Gmail, you need to use an **App Password** (not your regu
 ```php
 define("SMTP_HOST", "smtp.gmail.com");
 define("SMTP_PORT", 587);
-define("SMTP_USERNAME", "mycitiownersassociation@gmail.com");
+define("SMTP_USERNAME", "mycitilayout@gmail.com");
 define("SMTP_PASSWORD", "abcdefghijklmnop");  // 16-char app password
 define("SMTP_SECURE", "tls");
 ```
@@ -81,7 +81,7 @@ To:
 2. **Update the form action** in `index.html`
 3. **Upload to your web server** (won't work on localhost without mail config)
 4. **Test using** `test-form-manually.html`
-5. **Check email** at mycitiownersassociation@gmail.com
+5. **Check email** at mycitilayout@gmail.com
 
 ## Troubleshooting
 

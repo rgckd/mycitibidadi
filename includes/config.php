@@ -12,7 +12,7 @@ define('SITE_KEYWORDS', 'MyCiti Layout, Bidadi, Real Estate, Property');
 define('SITE_URL', 'https://mycitibidadi.com/');
 
 // Contact Information
-define('CONTACT_EMAIL', 'mycitiownersassociation@gmail.com');
+define('CONTACT_EMAIL', 'mycitilayout@gmail.com');
 define('CONTACT_PHONE', '+91 9900742192');
 define('CONTACT_PHONE_DISPLAY', '+91 9900742192, Chandre Gowda');
 define('CONTACT_ADDRESS', 'MyCiti Layout, Bidadi, Bengaluru');
