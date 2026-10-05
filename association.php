@@ -1,4 +1,6 @@
 <?php
+// Starts the session (before any output) so the contact form can carry a CSRF token.
+require_once 'includes/security.php';
 $current_page = 'association';
 include 'includes/header.php';
 ?>
@@ -264,8 +266,8 @@ include 'includes/header.php';
 					<div class="col-lg-7">
 						<div class="it-up-form-wrap">
 							<form action="contact.php" method="POST" id="contactForm">
-								<!-- CSRF token will be added via JavaScript -->
-								<input type="hidden" name="csrf_token" value="">
+								<!-- CSRF token rendered server-side; contact.php validates it -->
+								<input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars(generateCSRFToken(), ENT_QUOTES, 'UTF-8'); ?>">
 								
 								<div class="it-up-form-input">
 									<div class="row">
