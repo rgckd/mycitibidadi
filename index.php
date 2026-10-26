@@ -290,8 +290,8 @@ Bengaluru Rural District</a>
 	<script src="assets/js/jquery.counterup.min.js"></script>
 	<script src="assets/js/waypoints.min.js"></script>
 	<script src="assets/js/typer-new.js"></script>
-	<script src="assets/js/owners-testimonials.js"></script>
-	<script src="assets/js/it-source.js"></script>
+	<script src="assets/js/owners-testimonials.js?v=20261026"></script>
+	<script src="assets/js/it-source.js?v=20261026"></script>
 	
 	<!-- CSRF Token Generator -->
 	<script>
