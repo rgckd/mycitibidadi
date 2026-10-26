@@ -28,7 +28,7 @@ define('SOCIAL_THREADS', 'https://threads.net/mycitibidadi');
 // External Links
 define('GALLERY_URL', 'https://photos.app.goo.gl/XQNERoXqNmjK8jub6');
 define('MAPS_URL', 'https://maps.app.goo.gl/tZtpYUEQc9pqepqR9');
-define('UPDATES_URL', 'https://updates.mycitibidadi.com/');
+define('UPDATES_URL', 'https://mycitibidadi.com/news.php');
 
 // Office Hours
 define('OFFICE_HOURS', 'Mon - Sun: 9 am - 5 pm');

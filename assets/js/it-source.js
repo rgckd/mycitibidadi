@@ -327,10 +327,22 @@ Last change:    00/00/00
 					if (ownersTestimonials.length) {
 						ownersTestimonials.each(function () {
 							var carousel = $(this);
+
+							if (typeof OWNERS_TESTIMONIALS !== 'undefined') {
+								$.each(OWNERS_TESTIMONIALS, function (i, testimonial) {
+									var card = $('<div class="owners-testimonial-card"></div>');
+									$.each(testimonial.paragraphs, function (j, text) {
+										card.append($('<p></p>').text(text));
+									});
+									card.append($('<h4 class="owners-testimonial-author"></h4>').text(testimonial.author));
+									carousel.append($('<div class="owners-testimonial-item"></div>').append(card));
+								});
+							}
+
 							var items = carousel.children('.owners-testimonial-item');
 
-							if (items.length > 5) {
-								items.slice(5).remove();
+							if (items.length > 6) {
+								items.slice(6).remove();
 							}
 
 							carousel.owlCarousel({

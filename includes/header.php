@@ -100,7 +100,7 @@ $current_page = isset($current_page) ? $current_page : 'home';
 									<li><a class="nav-link" href="association.php">Association</a></li>
 									<li><a class="nav-link" href="gallery.php">Gallery</a></li>
 									<li><a class="nav-link" href="association.php#it-up-contact">Contact Us</a></li>
-									<li><a class="nav-link" href="<?php echo UPDATES_URL; ?>" target="_blank">Updates</a></li>
+									<li><a class="nav-link" href="<?php echo UPDATES_URL; ?>">News Updates</a></li>
 								</ul>
 							</nav>
 						</div>
